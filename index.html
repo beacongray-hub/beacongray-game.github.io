@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>오디세우스 — 귀향의 바다 v4.5 TROY PROLOGUE</title>
+<style id="baseStyle">
+  html,body{margin:0;padding:0}
+  body{background:#0b0812;color:#f0e6cc;font-family:"Pretendard","Malgun Gothic",sans-serif}
+  #boot{display:grid;place-items:center;min-height:100vh;font-size:15px;color:#c99a32}
+</style>
+<style id="gameStyle"></style>
+</head>
+<body>
+<div id="boot">항해 준비 중…</div>
+<div class="app" id="wrap" hidden>
+  <header id="topbar" class="topbar"></header>
+  <nav id="tabs"></nav>
+  <main id="screen"></main>
+  <footer class="foot">클릭으로 이동·대화 · 오른쪽 클릭(또는 ESC)은 메뉴 · 방향키/WASD·E 도 됩니다</footer>
+</div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<div id="overlay" class="overlay" role="dialog" aria-modal="true" hidden></div>
+<script src="system/pixel.js?v=7bb21ebb15"></script>
+<script src="system/tiles.js?v=7bb21ebb15"></script>
+<script src="system/props.js?v=7bb21ebb15"></script>
+<script src="system/sprites.js?v=7bb21ebb15"></script>
+<script src="system/portraits.js?v=7bb21ebb15"></script>
+<script src="system/maps.js?v=7bb21ebb15"></script>
+<script src="system/ui.js?v=7bb21ebb15"></script>
+<script src="system/system.js?v=7bb21ebb15"></script>
+<script src="system/audio.js?v=7bb21ebb15"></script>
+<script src="system/content.js?v=7bb21ebb15"></script>
+<script src="system/decisions.js?v=7bb21ebb15"></script>
+<script src="system/story.js?v=7bb21ebb15"></script>
+<script src="system/main.js?v=7bb21ebb15"></script>
+<script>
+(function(){
+  var lost=[];
+  function need(n,ok){ if(!ok) lost.push(n); }
+  need('PX', typeof PX!=='undefined'); need('PAL', typeof PAL!=='undefined');
+  need('TILES', typeof TILES!=='undefined'); need('PROPS', typeof PROPS!=='undefined');
+  need('SPRITES', typeof SPRITES!=='undefined'); need('PORTRAITS', typeof PORTRAITS!=='undefined');
+  need('MAPS', typeof MAPS!=='undefined'); need('UI', typeof UI!=='undefined');
+  need('SYSTEM', typeof SYSTEM!=='undefined'); need('AUDIO', typeof AUDIO!=='undefined');
+  need('CONTENT', typeof CONTENT!=='undefined'); need('DECISIONS', typeof DECISIONS!=='undefined'); need('STORY', typeof ODYSSEY_STORY!=='undefined');
+  function show(){
+    var b=document.getElementById('boot');
+    if(lost.length){ if(b) b.textContent='모듈 로드 실패: '+lost.join(', '); return; }
+    if(b) b.remove();
+    var w=document.getElementById('wrap'); if(w) w.hidden=false; }
+  if(document.readyState==='loading') window.addEventListener('DOMContentLoaded',show); else show();
+  window.addEventListener('error', function(e){
+    var b=document.getElementById('boot'); if(b) b.textContent='오류: '+e.message; });
+})();
+</script>
+</body>
+</html>

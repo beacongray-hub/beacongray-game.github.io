@@ -1,0 +1,71 @@
+오디세우스 귀향의바다 — 명화·유물 실물 이미지 출처
+(CONTENT.ARTS 5개 감상 스폿에 대응. 전부 퍼블릭 도메인)
+받은 날: 2026-08-14 / 원본: 위키미디어 커먼즈
+
+-------------------------------------------------------------------
+1) artwork-calypso.jpg          1600x1110  230KB
+   게임 내 id : a-calypso  (오기기아 · "바닷가의 바위")
+   작품      : 오디세우스와 칼립소 (Odysseus und Kalypso)
+   작가      : 아르놀트 뵈클린 (Arnold Böcklin), 1882~1883
+   소장      : 바젤 미술관 (Kunstmuseum Basel)
+   원본파일  : File:Arnold Böcklin 008.jpg  (6576x4562)
+   URL       : https://commons.wikimedia.org/wiki/File:Arnold_B%C3%B6cklin_008.jpg
+   라이선스  : Public domain (작가 사후 70년 경과)
+
+2) artwork-polyphemus.jpg       1600x700   289KB
+   게임 내 id : a-polyphemus  (키클롭스 섬 · "동굴의 그림자")
+   작품      : 오디세우스와 폴리페모스 (Odysseus und Polyphemus)
+   작가      : 아르놀트 뵈클린 (Arnold Böcklin), 1896
+   소장      : 보스턴 미술관 (Museum of Fine Arts, Boston)
+   원본파일  : File:Arnold Böcklin - Odysseus und Polyphemus (1896).jpg  (7200x3151)
+   URL       : https://commons.wikimedia.org/wiki/File:Arnold_B%C3%B6cklin_-_Odysseus_und_Polyphemus_(1896).jpg
+   라이선스  : Public domain
+
+3) artwork-tiresias.jpg         1600x1600  409KB
+   게임 내 id : a-tiresias  (저승 · "검은 석상")
+   작품      : 저승의 오디세우스와 테이레시아스
+               (루카니아 적회식 칼릭스 크라테르 A면, 기원전 380년경)
+   내용      : 에우릴로코스·페리메데스 사이에 앉은 오디세우스가
+               테이레시아스의 혼백에게 묻는 장면
+   소장      : 프랑스 국립도서관 메달실 (Cabinet des Médailles, BnF) 소장품 422
+   원본파일  : File:Odysseus Tiresias Cdm Paris 422.jpg  (1920x1920)
+   URL       : https://commons.wikimedia.org/wiki/File:Odysseus_Tiresias_Cdm_Paris_422.jpg
+   촬영      : Jastrow (2006)
+   라이선스  : Public domain
+   ※ 전체 항아리 사진이 필요하면:
+     File:Calyx-krater BnF De Ridder422 side A n01.jpg (7990x5327)
+
+4) artwork-sirens.jpg           1600x785   238KB
+   게임 내 id : a-sirens  (세이렌 해협 · "하얀 바위")
+   작품      : 오디세우스와 세이렌들 (Ulysses and the Sirens)
+   작가      : 존 윌리엄 워터하우스 (John William Waterhouse), 1891
+   소장      : 빅토리아 국립미술관, 멜버른 (National Gallery of Victoria)
+   원본파일  : File:John William Waterhouse - Ulysses and the Sirens
+               - Google Art Project.jpg  (11009x5400)
+   URL       : https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_Ulysses_and_the_Sirens_-_Google_Art_Project.jpg
+   라이선스  : Public domain (Google Art Project 스캔)
+
+5) artwork-penelope.jpg          900x612   104KB
+   게임 내 id : a-penelope  (이타카 · "홀의 벽화")
+   작품      : 페넬로페와 구혼자들 (Penelope and the Suitors)
+   작가      : 존 윌리엄 워터하우스 (John William Waterhouse), 1912
+   소장      : 애버딘 미술관 (Aberdeen Art Gallery) — 소장번호 ABDAG003035
+   원본파일  : File:JohnWilliamWaterhouse-PenelopeandtheSuitors(1912).jpg  (900x612)
+   URL       : https://commons.wikimedia.org/wiki/File:JohnWilliamWaterhouse-PenelopeandtheSuitors(1912).jpg
+   라이선스  : Public domain
+   ※ 커먼즈에 있는 유일한 스캔이 900x612 뿐입니다. 다른 4점보다
+     해상도가 낮으니, 감상 카드에서 확대 배율을 조금 낮게 잡는 편이 좋습니다.
+
+-------------------------------------------------------------------
+가공 내역
+ - 1·2·4번은 커먼즈 원본이 6000~11000px라 장변 1600px, JPEG 품질 84로
+   축소했습니다. 3·5번은 원본 그대로입니다(축소 불필요).
+ - 자르기·색보정은 하지 않았습니다. 구도는 원본 그대로입니다.
+
+이용 조건
+ - 5점 모두 저작권이 소멸한 퍼블릭 도메인 작품이라 교육용 게임에
+   자유롭게 쓸 수 있습니다. 다만 아이들이 보는 화면이므로 작가·연도·
+   소장처 표기(현재 CONTENT.ARTS의 artist 필드)는 그대로 유지하는 게 좋습니다.
+ - 1번 칼립소 그림에는 상반신 누드 표현이 있습니다(원작 그대로).
+   어린이용이라 신경 쓰인다면 인물 아래쪽으로 크롭한 버전을 따로
+   만들어 쓰는 방법도 있습니다.

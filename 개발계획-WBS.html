@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>오디세우스 — 귀향의 바다 | 전면 재개발 WBS</title>
+<style>
+@font-face{font-family:Pretendard;src:url('assets/Pretendard-Regular.woff2')}@font-face{font-family:Pretendard;src:url('assets/Pretendard-Bold.woff2');font-weight:700}
+:root{--navy:#07131d;--navy2:#0d2230;--ink:#15242d;--paper:#f3ead3;--paper2:#fffaf0;--gold:#c9962d;--gold2:#efd181;--line:#bca879;--blue:#147da0;--green:#26725d;--red:#a5453c;--muted:#66747a}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#06121b,#102b39 55%,#07131d);color:var(--ink);font-family:Pretendard,"Malgun Gothic",sans-serif;min-height:100vh}.top{padding:28px clamp(20px,4vw,58px);color:#fff;background:radial-gradient(circle at 75% 0,#275166 0,transparent 34%),linear-gradient(100deg,#07131d,#102b39);border-bottom:3px solid var(--gold)}.eyebrow{color:var(--gold2);font-weight:700;letter-spacing:.18em;font-size:12px}.top h1{font-size:clamp(27px,4vw,48px);margin:8px 0 7px}.top p{margin:0;color:#c8d7dc;max-width:900px;line-height:1.7}.toolbar{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;gap:8px;padding:12px clamp(16px,3vw,40px);background:#0a1922ee;backdrop-filter:blur(12px);border-bottom:1px solid #406071}.toolbar button,.file-label{border:1px solid #8b6b29;background:#1b2b32;color:#fff7df;padding:9px 13px;border-radius:5px;font:700 13px Pretendard;cursor:pointer}.toolbar button:hover,.file-label:hover{background:#8b6420}.toolbar .primary{background:#c9962d;color:#101820}.toolbar .danger{margin-left:auto;border-color:#81473f}.toolbar input{display:none}.save-state{align-self:center;color:#b9c9ce;font-size:12px;margin-left:5px}.wrap{max-width:1680px;margin:auto;padding:22px}.summary{display:grid;grid-template-columns:repeat(6,minmax(125px,1fr));gap:10px;margin-bottom:16px}.card{background:var(--paper2);border:1px solid var(--line);border-top:4px solid var(--gold);padding:13px 15px;box-shadow:0 9px 24px #0003}.card span{display:block;color:var(--muted);font-size:12px}.card b{font-size:24px;color:#173847}.progress{height:10px;background:#d6ceb9;margin-top:9px;border-radius:20px;overflow:hidden}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#46a17f);width:0}.panel{background:var(--paper);border:1px solid #c6af76;box-shadow:0 12px 30px #0004;margin-bottom:17px}.panel-head{display:flex;align-items:center;gap:12px;padding:14px 17px;background:linear-gradient(90deg,#152c39,#203f4d);color:white;border-bottom:2px solid var(--gold)}.panel-head h2{font-size:17px;margin:0}.panel-head small{color:#cbd9dc}.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#c5b17f}.principle{background:#fffaf0;padding:14px;line-height:1.55}.principle b{display:block;color:#8a5f12;margin-bottom:3px}.filters{display:flex;flex-wrap:wrap;gap:8px;padding:12px;background:#e7dbc0;border-bottom:1px solid #c3ae7d}.filters input,.filters select{font:14px Pretendard;border:1px solid #ae996d;background:#fffdf7;padding:8px 10px;border-radius:4px}.filters input{min-width:250px;flex:1}.table-wrap{overflow:auto;max-height:68vh}table{width:100%;border-collapse:separate;border-spacing:0;min-width:1460px;background:#fffdf7}th{position:sticky;top:0;z-index:2;background:#193543;color:#fff2cc;padding:10px 8px;font-size:12px;text-align:left;border-right:1px solid #3c5966}td{padding:8px;border-right:1px solid #ddd1b3;border-bottom:1px solid #ddd1b3;vertical-align:top;font-size:13px;line-height:1.45}tr:hover td{background:#fff7df}td[contenteditable=true]{outline:none}td[contenteditable=true]:focus{background:#fff1bb;box-shadow:inset 0 0 0 2px var(--gold)}.id{font-weight:700;color:#946311;white-space:nowrap}.phase{font-weight:700;color:#183b4b}.task{min-width:270px}.deliver{min-width:260px}.accept{min-width:320px}.owner{min-width:95px}.date{min-width:104px}.note{min-width:180px}.status-select,.priority-select{width:100%;font:12px Pretendard;padding:5px;border:1px solid #b3a277;background:white}.done td{opacity:.62}.done .task{text-decoration:line-through}.delete{border:0;background:transparent;color:#a5453c;font-size:17px;cursor:pointer}.legend{padding:13px 16px;color:#53646b;font-size:12px;line-height:1.7}.footer{color:#b8cbd1;text-align:center;font-size:12px;padding:15px 0 32px}.editable-title{border-bottom:1px dashed #d9bc70;outline:none}.modal{position:fixed;inset:0;background:#001018cc;z-index:30;display:none;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modal-box{max-width:760px;width:100%;max-height:90vh;overflow:auto;background:var(--paper2);border:3px solid var(--gold);padding:24px;box-shadow:0 20px 70px #000}.modal h2{margin-top:0}.modal textarea{width:100%;min-height:260px;font:13px Consolas,monospace}.modal .actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}.modal button{padding:9px 14px}.empty{padding:40px;text-align:center;color:#777}@media(max-width:900px){.summary{grid-template-columns:repeat(2,1fr)}.principles{grid-template-columns:1fr 1fr}.wrap{padding:12px}.toolbar .danger{margin-left:0}}@media print{body{background:white}.toolbar,.filters,.delete{display:none!important}.wrap{padding:0}.table-wrap{max-height:none;overflow:visible}th{position:static}.panel{box-shadow:none}.top{padding:18px;background:#173442!important;print-color-adjust:exact}.summary{grid-template-columns:repeat(6,1fr)}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="eyebrow">PROJECT REBIRTH · MASTER WORK BREAKDOWN STRUCTURE</div>
+  <h1 class="editable-title" contenteditable="true" data-field="projectTitle">오디세우스 — 귀향의 바다 전면 재개발</h1>
+  <p class="editable-title" contenteditable="true" data-field="projectVision">트로이 함락 직후부터 이타카 귀환까지, 고전 회화의 품격과 현대적인 가독성을 갖춘 교육형 서사 RPG로 처음부터 다시 설계한다.</p>
+</header>
+<nav class="toolbar">
+  <button class="primary" id="saveBtn">💾 현재 내용 저장</button>
+  <button id="addBtn">＋ 작업 추가</button>
+  <button id="exportBtn">JSON 백업</button>
+  <label class="file-label">JSON 불러오기<input type="file" id="importFile" accept="application/json,.json"></label>
+  <button id="htmlBtn">HTML 사본 저장</button>
+  <button id="printBtn">인쇄 / PDF</button>
+  <button class="danger" id="resetBtn">초기 계획 복원</button>
+  <span class="save-state" id="saveState">브라우저에 자동 저장됩니다.</span>
+</nav>
+<main class="wrap">
+  <section class="summary">
+    <div class="card"><span>전체 작업</span><b id="totalCount">0</b></div>
+    <div class="card"><span>완료</span><b id="doneCount">0</b></div>
+    <div class="card"><span>진행 중</span><b id="doingCount">0</b></div>
+    <div class="card"><span>검토 / 보류</span><b id="reviewCount">0</b></div>
+    <div class="card"><span>예상 개발 기간</span><b>24주</b></div>
+    <div class="card"><span>전체 진척률</span><b id="progressText">0%</b><div class="progress"><i id="progressBar"></i></div></div>
+  </section>
+  <section class="panel">
+    <div class="panel-head"><h2>재개발 원칙</h2><small>글을 클릭하면 직접 고칠 수 있습니다.</small></div>
+    <div class="principles">
+      <div class="principle" contenteditable="true" data-field="rule1"><b>01 · 이야기 우선</b>모든 이동·전투·퍼즐은 오디세이아의 사건과 인물 선택에서 비롯되어야 한다.</div>
+      <div class="principle" contenteditable="true" data-field="rule2"><b>02 · 한 화면 한 목적</b>지도, 대화, 도감, 미니게임이 서로 겹치지 않고 현재 행동이 즉시 보여야 한다.</div>
+      <div class="principle" contenteditable="true" data-field="rule3"><b>03 · 고전적이되 선명하게</b>회화·청동·양피지 미감을 쓰되 밝기, 대비, 글자 크기와 Pretendard 가독성을 우선한다.</div>
+      <div class="principle" contenteditable="true" data-field="rule4"><b>04 · 학습은 발견으로</b>신화 지식은 긴 설명문보다 인물·유물·현대 문화 연결을 수집하며 자연스럽게 익힌다.</div>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="panel-head"><h2>마스터 WBS</h2><small>셀을 클릭하여 수정 · 상태/우선순위 선택 · 자동 저장</small></div>
+    <div class="filters"><input id="search" placeholder="작업명, 산출물, 완료 조건 검색"><select id="phaseFilter"><option value="">전체 단계</option></select><select id="statusFilter"><option value="">전체 상태</option><option>미착수</option><option>진행 중</option><option>검토</option><option>완료</option><option>보류</option></select></div>
+    <div class="table-wrap"><table><thead><tr><th>ID</th><th>단계</th><th>작업</th><th>핵심 산출물</th><th>완료 조건</th><th>우선순위</th><th>상태</th><th>담당</th><th>시작</th><th>종료</th><th>메모</th><th></th></tr></thead><tbody id="wbsBody"></tbody></table><div class="empty" id="empty" hidden>조건에 맞는 작업이 없습니다.</div></div>
+    <div class="legend">상태별 진척 가중치: 미착수 0% · 진행 중 50% · 검토 80% · 완료 100% · 보류 0%. 날짜와 담당은 계획 수립용 초깃값이며 직접 변경할 수 있습니다.</div>
+  </section>
+  <div class="footer">이 문서는 서버 없이 실행됩니다. “현재 내용 저장”은 이 브라우저에 저장하고, JSON/HTML 사본 저장은 다른 컴퓨터에서도 복원 가능한 파일을 만듭니다.</div>
+</main>
+<script>
+const STORAGE='odyssey_rebirth_wbs_v1';
+const rows=[
+['1.1','기획·설계','재개발 목표와 대상 연령 확정','제품 비전, 대상 10~15세, 플레이 시간 정의','핵심 경험 5개와 제외 범위가 문서화됨','필수','미착수','기획','1주','1주',''],
+['1.2','기획·설계','원전 사건 구조 재해석','트로이→이타카 12장 서사 지도','각 장의 원전 근거·갈등·선택·학습 목표가 연결됨','필수','미착수','서사','1주','2주',''],
+['1.3','기획·설계','핵심 플레이 루프 설계','항해→탐색→대화/퍼즐→결단→성장 루프','10분 안에 한 번의 완결된 보상 순환이 발생함','필수','미착수','게임디자인','1주','2주',''],
+['1.4','기획·설계','난이도와 실패 규칙','용기·지혜·선원 사기·보급 게이지 규칙','실패가 즉시 끝이 아닌 다른 결과와 회복 기회로 연결됨','필수','미착수','게임디자인','2주','3주',''],
+['1.5','기획·설계','화면 정보 구조와 사용자 흐름','메인·항해·현장·대화·도감 와이어프레임','모든 핵심 기능이 2회 이내 클릭으로 도달 가능','필수','미착수','UX','2주','3주',''],
+['1.6','기획·설계','한·영 이중 언어 정책','용어집, 인명 표기, 발음·그리스/로마명 규칙','대화에는 발음 미노출, 도감에만 필요한 별칭 표시','높음','미착수','교육/번역','2주','3주',''],
+['2.1','기술 기반','데이터 중심 게임 구조 설계','챕터·대화·퀘스트·아이템 JSON 스키마','코드 수정 없이 데이터로 콘텐츠 교체 가능','필수','미착수','개발','3주','4주',''],
+['2.2','기술 기반','화면 관리자와 상태 머신','타이틀/시네마틱/지도/현장/전투/도감 전환','뒤로가기·중복 팝업·화면 잔상이 없음','필수','미착수','개발','3주','5주',''],
+['2.3','기술 기반','반응형 레이아웃 체계','1280×720~4K 대응 그리드와 축척 규칙','텍스트와 패널이 겹치거나 잘리지 않음','필수','미착수','UI개발','4주','5주',''],
+['2.4','기술 기반','저장 시스템 재구축','5슬롯, 자동저장, JSON 내보내기/불러오기','버전이 다른 저장 파일도 안전하게 마이그레이션','필수','미착수','개발','4주','6주',''],
+['2.5','기술 기반','접근성·입력 시스템','키보드/마우스/터치, 글자 확대, 음량 분리','주요 기능을 키보드만으로 수행 가능','높음','미착수','UI개발','5주','6주',''],
+['2.6','기술 기반','성능 예산과 자산 로더','지연 로딩, 이미지 압축, 저사양 모드','첫 화면 5초 이내, 장면 전환 1초 이내 목표','필수','미착수','개발','5주','7주',''],
+['3.1','비주얼·UX','통합 아트 디렉션','밝은 에게해 팔레트, 회화형 인물, 청동 프레임 규격','모든 화면이 동일 게임으로 인식되는 스타일 가이드 완성','필수','미착수','아트','3주','5주',''],
+['3.2','비주얼·UX','Pretendard 타이포 체계','제목/본문/수치/버튼 크기와 줄간격 토큰','한국어·영어 모두 겹침 없이 200% 확대 가능','필수','미착수','UI','4주','5주',''],
+['3.3','비주얼·UX','메인 화면과 메뉴 재제작','역동적 트로이 귀환 키아트, 새 게임/이어하기/스토리/설정','index.html 실행 시 반드시 타이틀부터 표시','필수','미착수','아트/UI','5주','7주',''],
+['3.4','비주얼·UX','항해 지도 전면 재제작','세로가 긴 에게해 지도, 항로, 날씨, HERO 통합 패널','지도 안에서 영웅·목표·항해 상태를 한눈에 확인','필수','미착수','아트/UI','6주','9주',''],
+['3.5','비주얼·UX','조사 현장 시스템 재제작','장소별 고해상도 배경과 탐색 지점 레이어','클릭 지점·상호작용 대상·목표가 시각적으로 구분됨','필수','미착수','아트/개발','7주','10주',''],
+['3.6','비주얼·UX','대화 연출 시스템','큰 장면화, 다양한 포즈, 발화자 전용 사진창과 본문','인명·역할·본문이 어떤 해상도에서도 겹치지 않음','필수','미착수','UI/서사','6주','9주',''],
+['3.7','비주얼·UX','공통 인물 만남 화면','선원·상인·무사이·사제·주민 만남 템플릿','모든 공통 인물에 얼굴과 장소에 맞는 장면이 있음','높음','미착수','아트/서사','8주','11주',''],
+['3.8','비주얼·UX','클래식 오케스트라 사운드','현악·하프·목관 중심 주제와 장면별 변주','8비트 음색 없이 음악/효과음 개별 조절 가능','높음','미착수','사운드','8주','12주',''],
+['4.1','오프닝·서사','오프닝 시네마틱 제작','트로이 전쟁 하이라이트→목마→승리→축제→출항','처음 보기/건너뛰기/스토리 메뉴 재감상 가능','필수','미착수','영상/서사','7주','10주',''],
+['4.2','오프닝·서사','장별 시네마틱 템플릿','5~8컷 장면, 내레이션, 전환, 인물 대사','해금된 장면만 스토리 보기에서 재생 가능','필수','미착수','영상/개발','9주','11주',''],
+['4.3','오프닝·서사','선택과 결과 기록','주요 결단, 손실, 관계, 배운 내용의 항해 일지','선택이 후속 대사·보상·엔딩에 최소 2회 반영됨','높음','미착수','서사/개발','10주','13주',''],
+['5.1','12장 콘텐츠','1장 트로이를 떠나다','출항 준비, 전리품 선택, 신에 대한 오만 경고','기본 조작과 첫 결단을 자연스럽게 학습','필수','미착수','콘텐츠','10주','12주',''],
+['5.2','12장 콘텐츠','2장 키코네스의 땅','약탈 중단 설득과 퇴각 타이밍 미션','탐욕과 지휘 책임의 결과가 선원 수에 반영','필수','미착수','콘텐츠','11주','13주',''],
+['5.3','12장 콘텐츠','3장 로토파고이','기억 게이지와 유혹 탈출 퍼즐','실패 시 기억 단서 감소, 회복 경로 제공','필수','미착수','콘텐츠','11주','14주',''],
+['5.4','12장 콘텐츠','4장 폴리페모스의 동굴','방탈출·양 세기·이름 속임수·탈출','힘보다 지혜를 쓰는 다단계 퍼즐 완성','필수','미착수','콘텐츠','12주','15주',''],
+['5.5','12장 콘텐츠','5장 아이올로스와 바람 자루','항로 균형 및 선원 신뢰 관리','집 바로 앞 실패의 원인이 플레이 선택으로 납득됨','필수','미착수','콘텐츠','13주','16주',''],
+['5.6','12장 콘텐츠','6장 라이스트뤼고네스','함선 배치와 제한 시간 탈출','함선 손실이 난이도와 후속 장면에 반영','필수','미착수','콘텐츠','14주','17주',''],
+['5.7','12장 콘텐츠','7장 키르케의 섬','몰리 찾기, 변신 해제, 협상 미션','헤르메스·키르케 신화와 선택 결과 수록','필수','미착수','콘텐츠','15주','18주',''],
+['5.8','12장 콘텐츠','8장 저승 여행','테이레시아스 의식과 기억의 인물 대화','죽음의 장면을 연령에 맞게 절제해 전달','필수','미착수','콘텐츠','16주','19주',''],
+['5.9','12장 콘텐츠','9장 세이렌의 노래','리듬·명령 순서·유혹 저항 미니게임','점수에 따라 지혜/사기/선원 피해가 달라짐','필수','미착수','콘텐츠','17주','20주',''],
+['5.10','12장 콘텐츠','10장 스킬라와 카리브디스','항로 선택과 피해 최소화 전술','완벽 승리가 아닌 어려운 선택의 의미 표현','필수','미착수','콘텐츠','18주','21주',''],
+['5.11','12장 콘텐츠','11장 칼립소와 파이아케스','머무름/귀향 대화, 뗏목 제작, 경기','칼립소·나우시카아·알키노오스 장면 완성','필수','미착수','콘텐츠','19주','22주',''],
+['5.12','12장 콘텐츠','12장 이타카 귀환','정체 숨기기, 활 시련, 페넬로페의 침상 시험','누적 선택을 반영한 귀환 엔딩과 후일담','필수','미착수','콘텐츠','20주','23주',''],
+['6.1','성장·도전','능력치·게이지 시스템','지혜·용기·절제·리더십, HP/사기/보급','각 능력치가 최소 3종 활동과 결과에 영향','필수','미착수','게임디자인','8주','11주',''],
+['6.2','성장·도전','미니게임 공통 프레임워크','점수, 난이도, 실패, 재도전, 보상 규칙','새 미니게임을 데이터와 모듈 1개로 추가 가능','필수','미착수','개발','9주','13주',''],
+['6.3','성장·도전','도전과 실패의 균형','게이지 감소, 부상, 단서 손실, 회복 이벤트','실패 후 막힘 없이 다른 전략으로 계속 진행','필수','미착수','게임디자인','13주','16주',''],
+['6.4','성장·도전','희귀 유물과 세트 보상','일반/희귀/전설 수집품과 숨은 획득 조건','전설 아이템이 능력과 학습 이야기를 함께 제공','높음','미착수','콘텐츠','14주','18주',''],
+['7.1','학습·컬렉션','인물 대백과 재구축','HD 전신화, 상징, 관계, 원전 사건, 다양한 포즈','주요 인물 전원 이미지 보유, 흐릿한 확대 없음','필수','미착수','아트/교육','10주','18주',''],
+['7.2','학습·컬렉션','그리스·로마명과 발음 정보','영문명, IPA/한글 발음, 다른 이름일 때만 로마명','제우스/유피테르처럼 실제로 다른 경우만 별도 표시','필수','미착수','교육/번역','11주','16주',''],
+['7.3','학습·컬렉션','신화 유물 도감','화로·암포라·프로메테우스의 불 등 HD 유물 카드','발견 즉시 큰 그림, 상세 이야기, 실제 문화 정보 표시','필수','미착수','아트/교육','12주','19주',''],
+['7.4','학습·컬렉션','오늘날의 신화 연결','니케와 Nike 등 언어·예술·과학·브랜드 유래','광고가 아닌 역사적 맥락과 사실 확인 출처 제공','높음','미착수','교육','13주','19주',''],
+['7.5','학습·컬렉션','학습 퀴즈와 복습','장 종료 3문항, 오답 해설, 도감 바로가기','암기 점수보다 이야기 이해를 확인하는 문항 구성','높음','미착수','교육','15주','21주',''],
+['8.1','품질·배포','콘텐츠 사실 검수','호메로스 원전과 주요 번역·박물관 자료 대조','오류·혼동 가능 표현 검수 기록 완료','필수','미착수','교육감수','18주','22주',''],
+['8.2','품질·배포','레이아웃 전수 검사','한국어/영어, 해상도 6종, 글자 확대 검사','겹침·잘림·낮은 대비 0건','필수','미착수','QA','20주','23주',''],
+['8.3','품질·배포','기능·저장 회귀 검사','새 게임부터 엔딩, 저장/불러오기, 분기 테스트','치명 오류 0건, 주요 오류 0건','필수','미착수','QA','20주','24주',''],
+['8.4','품질·배포','성능·용량 최적화','이미지 WebP/AVIF, 오디오 압축, 메모리 정리','권장 PC 60fps, 저사양 모드 30fps 유지','높음','미착수','개발','21주','24주',''],
+['8.5','품질·배포','GitHub Pages 배포판','독립 폴더, 상대경로, 라이선스, 실행 안내','폴더 전체 업로드 후 HTTPS 주소에서 즉시 실행','필수','미착수','배포','23주','24주',''],
+['8.6','품질·배포','구버전 보존과 신버전 전환','legacy 폴더, 변경 이력, 저장 호환 안내','구버전 손상 없이 신버전이 별도 주소로 운영됨','필수','미착수','배포','24주','24주','']
+];
+const fields=['id','phase','task','deliver','accept','priority','status','owner','start','end','note'];
+let state={meta:{},rows:rows.map(r=>Object.fromEntries(fields.map((f,i)=>[f,r[i]])))};
+const $=s=>document.querySelector(s), body=$('#wbsBody');
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function option(v,list){return list.map(x=>`<option${x===v?' selected':''}>${x}</option>`).join('')}
+function render(){
+ const q=$('#search').value.trim().toLowerCase(), pf=$('#phaseFilter').value, sf=$('#statusFilter').value;
+ const visible=state.rows.map((r,i)=>({r,i})).filter(({r})=>(!pf||r.phase===pf)&&(!sf||r.status===sf)&&(!q||Object.values(r).join(' ').toLowerCase().includes(q)));
+ body.innerHTML=visible.map(({r,i})=>`<tr data-i="${i}" class="${r.status==='완료'?'done':''}"><td class="id" contenteditable="true" data-k="id">${esc(r.id)}</td><td class="phase" contenteditable="true" data-k="phase">${esc(r.phase)}</td><td class="task" contenteditable="true" data-k="task">${esc(r.task)}</td><td class="deliver" contenteditable="true" data-k="deliver">${esc(r.deliver)}</td><td class="accept" contenteditable="true" data-k="accept">${esc(r.accept)}</td><td><select class="priority-select" data-k="priority">${option(r.priority,['필수','높음','보통','낮음'])}</select></td><td><select class="status-select" data-k="status">${option(r.status,['미착수','진행 중','검토','완료','보류'])}</select></td><td class="owner" contenteditable="true" data-k="owner">${esc(r.owner)}</td><td class="date" contenteditable="true" data-k="start">${esc(r.start)}</td><td class="date" contenteditable="true" data-k="end">${esc(r.end)}</td><td class="note" contenteditable="true" data-k="note">${esc(r.note)}</td><td><button class="delete" title="삭제">×</button></td></tr>`).join('');
+ $('#empty').hidden=visible.length>0; updateSummary(); updatePhases();
+}
+function updateSummary(){const n=state.rows.length,d=state.rows.filter(r=>r.status==='완료').length,g=state.rows.filter(r=>r.status==='진행 중').length,rv=state.rows.filter(r=>['검토','보류'].includes(r.status)).length;const weight={미착수:0,'진행 중':.5,검토:.8,완료:1,보류:0};const pct=n?Math.round(state.rows.reduce((a,r)=>a+(weight[r.status]||0),0)/n*100):0;$('#totalCount').textContent=n;$('#doneCount').textContent=d;$('#doingCount').textContent=g;$('#reviewCount').textContent=rv;$('#progressText').textContent=pct+'%';$('#progressBar').style.width=pct+'%'}
+function updatePhases(){const s=$('#phaseFilter'),v=s.value,ph=[...new Set(state.rows.map(r=>r.phase))];s.innerHTML='<option value="">전체 단계</option>'+ph.map(x=>`<option${x===v?' selected':''}>${esc(x)}</option>`).join('')}
+function captureMeta(){document.querySelectorAll('[data-field]').forEach(el=>state.meta[el.dataset.field]=el.innerHTML)}
+function applyMeta(){document.querySelectorAll('[data-field]').forEach(el=>{if(state.meta[el.dataset.field])el.innerHTML=state.meta[el.dataset.field]})}
+function persist(show=true){captureMeta();localStorage.setItem(STORAGE,JSON.stringify(state));if(show){$('#saveState').textContent='저장됨 · '+new Date().toLocaleTimeString();setTimeout(()=>$('#saveState').textContent='브라우저에 자동 저장됩니다.',2500)}}
+function loadLocal(){try{const x=JSON.parse(localStorage.getItem(STORAGE));if(x&&Array.isArray(x.rows))state=x}catch(e){}applyMeta();render()}
+body.addEventListener('input',e=>{const tr=e.target.closest('tr'),k=e.target.dataset.k;if(tr&&k){state.rows[+tr.dataset.i][k]=e.target.innerText;persist(false);updateSummary()}});
+body.addEventListener('change',e=>{const tr=e.target.closest('tr'),k=e.target.dataset.k;if(tr&&k){state.rows[+tr.dataset.i][k]=e.target.value;persist(false);render()}});
+body.addEventListener('click',e=>{if(e.target.classList.contains('delete')){const i=+e.target.closest('tr').dataset.i;if(confirm('이 작업을 삭제할까요?')){state.rows.splice(i,1);persist();render()}}});
+document.querySelectorAll('[data-field]').forEach(el=>el.addEventListener('input',()=>persist(false)));
+$('#saveBtn').onclick=()=>persist();
+$('#addBtn').onclick=()=>{state.rows.push({id:'새 작업',phase:'미분류',task:'작업 내용을 입력하세요',deliver:'산출물을 입력하세요',accept:'완료 조건을 입력하세요',priority:'보통',status:'미착수',owner:'',start:'',end:'',note:''});persist();render();document.querySelector('tr:last-child')?.scrollIntoView({behavior:'smooth'})};
+function download(name,text,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+$('#exportBtn').onclick=()=>{captureMeta();download('오디세우스-전면재개발-WBS-'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify({format:'odyssey-wbs',version:1,updatedAt:new Date().toISOString(),...state},null,2),'application/json')};
+$('#importFile').onchange=async e=>{try{const x=JSON.parse(await e.target.files[0].text());if(!Array.isArray(x.rows))throw Error();state={meta:x.meta||{},rows:x.rows};applyMeta();persist();render();alert('WBS 파일을 불러왔습니다.')}catch(err){alert('올바른 WBS JSON 파일이 아닙니다.')}e.target.value=''};
+$('#htmlBtn').onclick=()=>{captureMeta();const clone=document.documentElement.cloneNode(true);const script=clone.querySelector('script');script.insertAdjacentHTML('beforebegin',`<script>localStorage.setItem('${STORAGE}',${JSON.stringify(JSON.stringify(state))})<\/script>`);download('오디세우스-전면재개발-WBS-사본.html','<!doctype html>\n'+clone.outerHTML,'text/html;charset=utf-8')};
+$('#printBtn').onclick=()=>window.print();
+$('#resetBtn').onclick=()=>{if(confirm('수정한 내용을 모두 지우고 최초 WBS로 되돌릴까요?')){localStorage.removeItem(STORAGE);location.reload()}};
+['search','phaseFilter','statusFilter'].forEach(id=>$('#'+id).addEventListener(id==='search'?'input':'change',render));
+let timer;document.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>persist(false),500)});loadLocal();
+</script>
+</body>
+</html>
