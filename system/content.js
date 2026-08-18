@@ -1040,7 +1040,7 @@ ithaca: [
 ]
 },
 /* ==========================================================================
-   3. 아이템 — 49종. 아이콘은 12행 × 12자, '.' 은 투명, 색은 PAL 참조만 쓴다.
+   3. 아이템 — 51종. 아이콘은 12행 × 12자, '.' 은 투명, 색은 PAL 참조만 쓴다.
    장비 계열 4줄: 흉갑(가죽→청동→영웅) 투구(가죽→청동→멧돼지) 창(물푸레→청동→왕)
                  방패(버들→소가죽→청동)
    ========================================================================== */
@@ -1052,6 +1052,18 @@ aeolus_compass:{ name:'아이올로스의 폭풍 나침반', kind:'relic', rarit
   icon:{ pal:{ o:PAL.ink0, a:PAL.gd3, b:PAL.gd1, c:PAL.se4, d:PAL.iv4 }, rows:[
     '....oooo....','..ooaaaaoo..','.oaacdcaaao.','oaaccdccaaao','oacccdcccaao','oadccccccdao',
     'oacccccccaao','oaaccdccaaao','.oaacdcaaao.','..ooaaaaoo..','....oooo....','............'] } },
+
+/* ---- 여정 이전부터 지닌 물건 ----
+   penelope_carving 은 《오디세이아》 원전에 없는 물건이다. 후대 창작(무대·영상)에서
+   오디세우스의 귀향 동기를 눈에 보이게 만들려고 더한 소품이라, 시작 소지품으로 두되
+   ITEM_LORE 에서 "원전 아님"을 분명히 밝힌다. 원전 유물과 섞이지 않도록 이 자리에 둔다. */
+penelope_carving:{ name:'페넬로페의 목각상', kind:'relic', rarity:2,
+  desc:'전쟁터에서 손수 깎은 손바닥만 한 아내의 조각상. 왜 돌아가야 하는지 잊을 것 같을 때마다 꺼내 본다. — 원전에는 없는, 후대 창작이 더한 물건.',
+  effect:'귀향의 맹세 · 지혜 +3, 최대 HP +5',
+  stat:{atk:0,def:0,wis:3,hp:5},
+  icon:{ pal:{ o:PAL.ink0, a:PAL.wd2, b:PAL.wd4, c:PAL.gd3 }, rows:[
+    '....oooo....','...occcco...','...obbbbo...','...obbbbo...','..oobbbboo..','..obbaabbo..',
+    '.obbaaaabbo.','.obaaaaaabo.','.obaaaaaabo.','.obbaaaabbo.','..obbbbbbo..','..oooooooo..'] } },
 
 /* ---- 오기기아 ---- */
 hermes_word:{ name:'헤르메스의 전갈', kind:'key', rarity:2,
@@ -1556,7 +1568,7 @@ ogygia: [
     text:'오디세우스가 매일 앉아 고향 쪽 수평선을 바라보던 자리다. 훗날 화가들이 이 장면을 화폭에 담았다.' }
 ],
 scheria: [
-  { at:[26,5], name:'포세이돈 신전', hint:true,
+  { at:[26,5], name:'포세이돈 신전', hint:true, img:'assets/generated/poseidon-temple-front.png', kind:'바다의 신에게 바치는 정면 신전',
     text:'뱃사람의 나라답게 바다의 신을 모신다. 제단의 새김글: "바다는 손님을 데려오고, 손님은 이야기를 데려온다."' },
   { at:[29,10], name:'궁전의 화로', hint:false,
     text:'아레테 왕비의 화로. 탄원하는 손님은 먼저 이 화로 곁에 앉는 것이 파이아케스의 법도였다.' }
@@ -1602,9 +1614,9 @@ sirens: [
     text:'세이렌이 앉던 바위. 워터하우스가 그린 그 장면이 여기서 시작되었다.' }
 ],
 thrinacia: [
-  { at:[29,5], name:'태양신의 제단', hint:true,
+  { at:[29,5], name:'태양신의 제단', hint:true, img:'assets/generated/helios-altar-front.png', kind:'헬리오스를 위한 봉헌 제단',
     text:'제단이 아직 따뜻하다. 새김글: "여기 있는 것은 모두 태양의 것." — 배가 고파도, 읽은 것은 지켜야 한다.' },
-  { at:[23,7], name:'태양신의 소', hint:false,
+  { at:[23,7], name:'태양신의 소', hint:false, img:'assets/generated/helios-ox-front.png', kind:'헬리오스의 신성한 가축',
     text:'뿔이 금빛으로 빛나는 소가 태평하게 풀을 뜯는다. 세는 것은 괜찮지만, 만지는 것은 안 된다.' }
 ],
 ithaca: [

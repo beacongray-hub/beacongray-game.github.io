@@ -705,13 +705,33 @@ const TILES = (function () {
   }
 
   /* 4-4. 벽 좌/우 모서리 (광원 좌상 : 왼쪽 밝게, 오른쪽 어둡게) */
-  mkOv('wL', function (g) { PX.dither(g, 0, 0, 1, 15, PAL.st4, 3, 0); });
-  mkOv('wR', function (g) { PX.dither(g, 15, 0, 1, 15, PAL.st0, 2, 0); });
+  /* 점묘로 찍으면 돌 그림 위에서 "점선 테두리"처럼 보인다. 반투명 모서리로 바꾼다. */
+  mkOv('wL', function (g) { g.fillStyle = 'rgba(255,246,222,.30)'; g.fillRect(0, 0, 1, 15); });
+  mkOv('wR', function (g) { g.fillStyle = 'rgba(26,18,10,.28)'; g.fillRect(15, 0, 1, 15); });
 
-  /* 4-5. 벽 아래 바닥 : 앞면 그림자를 받아 상단 2px 어둡게 */
+  /* 4-5. 벽 아래 바닥 : 앞면 그림자를 받아 상단을 어둡게.
+     3px 로 떨어지게 해서 "위에 뭔가 서 있다"가 바닥에서도 읽히게 한다. */
   mkOv('cs', function (g) {
-    PX.dither(g, 0, 0, T, 1, PAL.ink1, 3, 0);
-    PX.dither(g, 0, 1, T, 1, PAL.ink1, 1, 0);
+    g.fillStyle = 'rgba(24,16,9,.30)'; g.fillRect(0, 0, T, 1);
+    g.fillStyle = 'rgba(24,16,9,.19)'; g.fillRect(0, 1, T, 1);
+    g.fillStyle = 'rgba(24,16,9,.09)'; g.fillRect(0, 2, T, 1);
+  });
+
+  /* 4-6. HD 지형 위에 얹는 높이 표시 (앞면).
+     HD 아틀라스는 벽(#·^)과 바닥(o·O·%)을 같은 돌 그림 한 장으로 그린다.
+     그래서 HD 가 로드되면 절차적 타일의 윗면/앞면이 통째로 건너뛰어지고
+     높은 곳과 낮은 곳이 완전히 같아 보였다. 이 오버레이가 그 단차를 되살린다.
+     ─ y8  : 볕을 받는 윗 모서리(밝은 립)  ─ y9~15 : 그늘진 수직 앞면
+     그늘은 점묘(dither) 대신 반투명으로 덮는다. 점묘로 검게 찍으면 돌 그림 위에서
+     체크무늬처럼 보여 "그림자"가 아니라 "얼룩"으로 읽힌다. */
+  mkOv('hdTop', function (g) {                        /* 높은 면 : 하늘빛을 더 받는다 */
+    g.fillStyle = 'rgba(255,244,216,.13)'; g.fillRect(0, 0, T, T);
+  });
+  mkOv('hdFace', function (g) {
+    g.fillStyle = 'rgba(26,18,10,.34)'; g.fillRect(0, 9, T, 7);   /* 수직 앞면 그늘 */
+    g.fillStyle = 'rgba(20,13,7,.30)'; g.fillRect(0, 13, T, 3);   /* 아래로 갈수록 짙게 */
+    PX.hline(g, 0, 8, T, PAL.st4);                    /* 볕 받는 윗 모서리 */
+    PX.dither(g, 0, 9, T, 1, PAL.st3, 1, 0);          /* 모서리 아래 반사광 */
   });
 
   /* ================================================================
@@ -767,6 +787,13 @@ const TILES = (function () {
       if (isWater(cs) && isWater(ce) && !isWater(cse)) g.drawImage(OV['sc2' + f4], px, py);
       if (isWater(cs) && isWater(cw) && !isWater(csw)) g.drawImage(OV['sc3' + f4], px, py);
     } else if (isWall(ch)) {
+      /* HD 지형은 벽과 바닥이 같은 그림이라 단차가 사라진다.
+         ① 벽 윗면 전체를 살짝 밝혀 "높은 면"으로 구분하고
+         ② 아래가 벽이 아닌 칸(=단차 가장자리)에는 수직 앞면을 얹는다. */
+      if (hdPainted) {
+        g.drawImage(OV['hdTop'], px, py);
+        if (fr === 0) g.drawImage(OV['hdFace'], px, py);
+      }
       if (!isWall(cw)) g.drawImage(OV['wL'], px, py);
       if (!isWall(ce)) g.drawImage(OV['wR'], px, py);
     } else {

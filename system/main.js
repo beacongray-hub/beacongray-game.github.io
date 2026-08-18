@@ -130,7 +130,7 @@ body.title-shell #topbar,body.title-shell #tabs,body.title-shell .foot{display:n
 .sail-challenge{text-align:center;padding:16px}.sail-help{margin:0 0 10px!important;font-size:16px;line-height:1.65;color:#f2e6c7}.sail-help b{color:#83f4b7}.sail-board{position:relative;height:250px;margin:10px 0 15px;overflow:hidden;border:3px solid #bd8731;background:linear-gradient(#82b9d1 0 36%,#21718e 37% 54%,#07506d 55% 72%,#032e47 73%);box-shadow:inset 0 0 0 2px #08151c,inset 0 -25px 45px rgba(0,0,0,.32)}.sail-board:before,.sail-board:after{content:"";position:absolute;left:-5%;width:110%;height:22px;background:repeating-radial-gradient(ellipse at 50% 100%,transparent 0 13px,rgba(190,239,250,.72) 14px 16px,transparent 17px 28px);animation:sailWater 2.1s linear infinite}.sail-board:before{top:126px}.sail-board:after{top:166px;opacity:.45;animation-direction:reverse}.sail-route{position:absolute;left:8%;right:8%;top:111px;height:4px;border-radius:4px;background:linear-gradient(90deg,transparent,#f8dc78 12% 88%,transparent);box-shadow:0 0 9px rgba(255,220,100,.72)}.sail-route:before,.sail-route:after{content:"";position:absolute;top:-5px;width:11px;height:11px;border:2px solid #ffe79a;border-radius:50%;background:#214e61}.sail-route:before{left:0}.sail-route:after{right:0}.sail-boat{position:absolute;z-index:3;left:9%;top:52px;width:92px;height:82px;display:grid;place-items:center;font-size:72px;line-height:1;filter:drop-shadow(0 8px 5px rgba(0,0,0,.55));animation:sailPatrol 1.45s ease-in-out infinite alternate}.sail-wave{position:absolute;z-index:2;right:-150px;top:77px;font-size:105px;line-height:1;filter:drop-shadow(0 5px 5px #002033);opacity:.55}.sail-board.warning .sail-wave{animation:waveWarn .75s ease-out forwards}.sail-board.go{background:linear-gradient(#8bd3c4 0 36%,#218c81 37% 54%,#08655e 55% 72%,#063c49 73%);box-shadow:inset 0 0 0 5px #45e99b,inset 0 0 42px rgba(69,233,155,.55)}.sail-board.go .sail-boat{animation:sailGo .55s ease-out infinite alternate;filter:drop-shadow(0 0 10px #aaffd1) drop-shadow(0 8px 5px #000)}.sail-board.go .sail-wave{right:7%;opacity:1;animation:wavePulse .45s ease-in-out infinite alternate}.sail-board.hit{box-shadow:inset 0 0 0 7px #80ffc0,inset 0 0 70px #42e89a}.sail-board.miss{filter:saturate(.35);box-shadow:inset 0 0 0 7px #ec6652,inset 0 0 65px rgba(220,55,39,.6)}
 .sail-lights{position:absolute;z-index:5;top:14px;left:50%;transform:translateX(-50%);display:flex;gap:9px;padding:8px 12px;border:2px solid #9d762f;border-radius:22px;background:#151514;box-shadow:0 5px 12px #000}.sail-light{width:22px;height:22px;border-radius:50%;background:#393835;border:2px solid #050505;box-shadow:inset 0 2px 5px #000}.sail-light.red.on{background:#ed5b4c;box-shadow:0 0 15px #ed5b4c}.sail-light.yellow.on{background:#ffd451;box-shadow:0 0 17px #ffd451}.sail-light.green.on{background:#55f29d;box-shadow:0 0 20px #55f29d}.sail-timing{position:absolute;z-index:5;left:8%;right:8%;bottom:16px;height:24px;padding:4px;background:#071219;border:2px solid #dfb14f}.sail-zone{position:absolute;left:38%;width:24%;top:4px;bottom:4px;background:rgba(64,233,146,.42);border-left:2px solid #6fffb2;border-right:2px solid #6fffb2}.sail-marker{position:absolute;z-index:2;left:4px;top:1px;width:7px;height:18px;background:#fff0a0;box-shadow:0 0 10px #fff}.sail-board.go .sail-marker{animation:sailTiming var(--sail-window,900ms) linear forwards}.sail-signal{min-height:42px;font-family:var(--ui-serif);font-size:28px;font-weight:800;color:#ffe59a}.sail-signal.go{color:#7dffbd;text-shadow:0 0 15px #19b67b}.sail-signal.bad{color:#ff8876}.sail-rounds{display:flex;justify-content:center;gap:10px;margin:8px}.sail-round{width:48px;height:10px;border:1px solid #8a672c;background:#211a14}.sail-round.hit{background:#4ee295;box-shadow:0 0 8px #33c27c}.sail-round.miss{background:#d45b4a}.sail-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.sail-actions #sailHit{min-width:190px;min-height:64px;font-size:22px}.sail-key{display:block;margin-top:5px;font-size:12px;color:#b9ae95}@keyframes sailPatrol{from{left:9%;transform:rotate(-2deg)}to{left:calc(91% - 92px);transform:rotate(2deg)}}@keyframes sailGo{from{transform:translateY(-3px) rotate(-3deg)}to{transform:translateY(4px) rotate(3deg)}}@keyframes sailWater{to{transform:translateX(28px)}}@keyframes waveWarn{to{right:18%;opacity:.9}}@keyframes wavePulse{to{transform:scale(1.08)}}@media(max-width:620px){.sail-board{height:215px}.sail-boat{width:72px;font-size:58px;animation-name:sailPatrolMobile}.sail-wave{font-size:80px}.sail-signal{font-size:23px}@keyframes sailPatrolMobile{from{left:7%}to{left:calc(93% - 72px)}}}
 .divine-meta{display:block;margin-top:4px;font:700 11px/1.55 ui-monospace,monospace;color:#22788d;letter-spacing:.01em}.divine-meta em{color:#8b5919;font-style:normal}.conversation-line .divine-meta{color:#287b8b}.conversation-line .divine-meta em{color:#9a651e}.item-legend{margin:0 0 8px;padding:7px 10px;border-left:4px solid #e1ae3f;background:rgba(220,166,48,.1);color:var(--iv2);font-size:12px}
-.voyage-frame{display:grid;grid-template-columns:minmax(0,1fr) 224px;align-items:stretch;gap:12px;padding:10px;background:linear-gradient(145deg,#452a12,#120b07 34%,#07090b 70%,#2a190b);border:1px solid #e2bc65;box-shadow:inset 0 0 0 3px #0b0705,inset 0 0 0 5px #8e5e22,inset 0 0 22px rgba(231,186,83,.2);overflow:hidden}.voyage-frame .viewport{width:100%!important;height:100%;min-width:0;margin:0!important;border:3px solid #d7b05a;outline:2px solid #241509;outline-offset:-7px;box-shadow:inset 0 0 0 1px #f5dd9b,0 8px 20px #000}.voyage-frame .viewport:before{content:"";position:absolute;z-index:6;inset:10px;pointer-events:none;border:1px solid rgba(255,233,170,.6);box-shadow:inset 0 0 0 2px rgba(18,10,5,.7),inset 0 0 32px rgba(7,12,15,.42)}.voyage-frame .viewport .cv{width:100%;height:100%;object-fit:fill;image-rendering:auto;filter:saturate(1.18) contrast(1.08) brightness(1.1)}.voyage-map-plaque{position:absolute;z-index:8;left:50%;top:12px;transform:translateX(-50%);min-width:210px;padding:7px 18px;text-align:center;line-height:1.25;color:#f8df99;background:linear-gradient(#54351c,#150d08);border:1px solid #e0b65b;box-shadow:inset 0 0 0 2px #211207,0 5px 12px rgba(0,0,0,.65);font-family:var(--ui-serif);font-size:14px;letter-spacing:.08em}.voyage-map-plaque small{display:block;margin-top:2px;color:#bfcbd0;font-size:9px;letter-spacing:.14em}.voyage-frame #herobar{width:auto!important;height:100%;min-width:0;margin:0!important;display:flex;overflow:auto}.voyage-frame #herobar>.win{width:100%;margin:0}.voyage-frame #herobar .win-bd{height:100%;padding:5px!important}.hero-vertical{min-height:100%;display:flex!important;flex-direction:column;grid-template-columns:none!important;gap:7px!important;align-items:stretch!important;padding:9px!important;border:1px solid #bd8a34;background:linear-gradient(180deg,#263b4c,#0a131b 62%,#080b0e)}.hero-vertical .hs-por{display:flex;justify-content:center}.hero-vertical .hs-por img{display:block;width:112px;height:112px;object-fit:cover;object-position:center 25%;border:3px solid #d5a846;box-shadow:inset 0 0 0 2px #16100a,0 6px 16px #000}.hero-vertical .hs-id{text-align:center}.hero-vertical .hs-id b{font-size:18px}.hero-vertical .hs-gauges{display:grid;grid-template-columns:1fr!important;gap:3px!important}.hero-vertical .hs-right{display:flex!important;flex-direction:column;gap:5px;justify-items:stretch!important}.hero-vertical .hs-stats{display:grid!important;grid-template-columns:repeat(3,1fr);gap:4px!important}.hero-vertical .hs-stats span{padding:4px 2px}.hero-vertical .hs-equip{display:grid!important;grid-template-columns:1fr;gap:3px!important}.hero-vertical .hs-equip .eq{min-width:0;padding:4px}.voyage-destination{margin-top:auto;padding:8px;text-align:center;background:rgba(211,161,54,.12);border:1px solid #8b6429;color:var(--iv2);font-size:10px;line-height:1.5}.voyage-destination b{display:block;color:var(--gd3);font-family:var(--ui-serif);font-size:14px}@media(max-width:900px){.voyage-frame{height:auto!important;grid-template-columns:1fr;overflow:visible}.voyage-frame .viewport{height:auto}.voyage-frame .viewport .cv{height:auto}.voyage-frame #herobar{height:auto;display:block;overflow:visible}.hero-vertical{height:auto;display:grid!important;grid-template-columns:120px minmax(0,1fr)!important}.hero-vertical .hs-gauges,.hero-vertical .hs-right,.hero-vertical .voyage-destination{grid-column:1/-1}.hero-vertical .hs-id{text-align:left;align-self:center}}
+.voyage-frame{display:grid;grid-template-columns:minmax(0,1fr) 276px;align-items:stretch;gap:12px;padding:10px;background:linear-gradient(145deg,#452a12,#120b07 34%,#07090b 70%,#2a190b);border:1px solid #e2bc65;box-shadow:inset 0 0 0 3px #0b0705,inset 0 0 0 5px #8e5e22,inset 0 0 22px rgba(231,186,83,.2);overflow:hidden}.voyage-frame .viewport{width:100%!important;height:100%;min-width:0;margin:0!important;border:3px solid #d7b05a;outline:2px solid #241509;outline-offset:-7px;box-shadow:inset 0 0 0 1px #f5dd9b,0 8px 20px #000}.voyage-frame .viewport:before{content:"";position:absolute;z-index:6;inset:10px;pointer-events:none;border:1px solid rgba(255,233,170,.6);box-shadow:inset 0 0 0 2px rgba(18,10,5,.7),inset 0 0 32px rgba(7,12,15,.42)}.voyage-frame .viewport .cv{width:100%;height:100%;object-fit:fill;image-rendering:auto;filter:saturate(1.18) contrast(1.08) brightness(1.1)}.voyage-map-plaque{position:absolute;z-index:8;left:50%;top:12px;transform:translateX(-50%);min-width:210px;padding:7px 18px;text-align:center;line-height:1.25;color:#f8df99;background:linear-gradient(#54351c,#150d08);border:1px solid #e0b65b;box-shadow:inset 0 0 0 2px #211207,0 5px 12px rgba(0,0,0,.65);font-family:var(--ui-serif);font-size:14px;letter-spacing:.08em}.voyage-map-plaque small{display:block;margin-top:2px;color:#bfcbd0;font-size:9px;letter-spacing:.14em}.voyage-frame #herobar{width:auto!important;height:100%;min-width:0;margin:0!important;display:flex;overflow:auto}.voyage-frame #herobar>.win{width:100%;margin:0}.voyage-frame #herobar .win-bd{height:100%;padding:5px!important}.hero-vertical{min-height:100%;display:flex!important;flex-direction:column;grid-template-columns:none!important;gap:7px!important;align-items:stretch!important;padding:9px!important;border:1px solid #bd8a34;background:linear-gradient(180deg,#263b4c,#0a131b 62%,#080b0e)}.hero-vertical .hs-por{display:flex;justify-content:center}.hero-vertical .hs-por img{display:block;width:132px;height:132px;object-fit:cover;object-position:center 25%;border:3px solid #d5a846;box-shadow:inset 0 0 0 2px #16100a,0 6px 16px #000}.hero-vertical .hs-id{text-align:center}.hero-vertical .hs-id b{font-size:18px}.hero-vertical .hs-gauges{display:grid;grid-template-columns:1fr!important;gap:3px!important}.hero-vertical .hs-right{display:flex!important;flex-direction:column;gap:5px;justify-items:stretch!important}.hero-vertical .hs-stats{display:grid!important;grid-template-columns:repeat(3,1fr);gap:4px!important}.hero-vertical .hs-stats span{padding:4px 2px}.hero-vertical .hs-equip{display:grid!important;grid-template-columns:1fr;gap:3px!important}.hero-vertical .hs-equip .eq{min-width:0;padding:4px}.voyage-destination{margin-top:auto;padding:8px;text-align:center;background:rgba(211,161,54,.12);border:1px solid #8b6429;color:var(--iv2);font-size:10px;line-height:1.5}.voyage-destination b{display:block;color:var(--gd3);font-family:var(--ui-serif);font-size:14px}@media(max-width:900px){.voyage-frame{height:auto!important;grid-template-columns:1fr;overflow:visible}.voyage-frame .viewport{height:auto}.voyage-frame .viewport .cv{height:auto}.voyage-frame #herobar{height:auto;display:block;overflow:visible;--frame-w:26px}.hero-vertical{height:auto;display:grid!important;grid-template-columns:132px minmax(0,1fr)!important;padding:8px!important}.hero-vertical .hs-gauges,.hero-vertical .hs-right,.hero-vertical .voyage-destination{grid-column:1/-1}.hero-vertical .hs-id{text-align:left;align-self:center}}
 .hero-strip{display:grid;grid-template-columns:56px auto minmax(200px,1fr) auto;gap:12px;align-items:center}
 .hs-por canvas{display:block;width:56px;height:auto;image-rendering:pixelated;border:2px solid var(--gd1)}
 .hs-id{min-width:84px}
@@ -289,12 +289,15 @@ canvas.icon{width:26px;height:26px;image-rendering:pixelated;display:block;margi
 .shophead p{margin:0;font-size:13px;color:var(--iv2);word-break:keep-all}
 .spotbody p{margin:0 0 10px;font-size:14.5px;line-height:1.8;color:var(--iv3);word-break:keep-all}
 .spot-hint{margin:8px 0;padding:8px 10px;font-size:13px;color:var(--gd4);background:var(--ink0);border-left:4px solid var(--gd2)}
-.artwrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start}
-@media(max-width:620px){.artwrap{grid-template-columns:minmax(0,1fr)}}
-.artframe{padding:7px;background:var(--wd1);border:3px solid var(--gd1);
+/* 그림 위 · 글 아래로 쌓는다. 예전 2단(auto + 1fr) 배치는 원본 사진처럼 큰 그림이 오면
+   auto 칸이 그림의 원래 너비만큼 부풀어 글 칸이 한 글자 폭으로 찌그러졌다. */
+.artwrap{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-items:start}
+/* 액자는 그림 크기에 맞춰 줄어든다 — 안 그러면 좌우에 검은 여백이 생긴다 */
+.artframe{width:fit-content;max-width:100%;margin:0 auto;padding:7px;background:var(--wd1);border:3px solid var(--gd1);
   box-shadow:inset 0 0 0 2px var(--wd0),inset 2px 2px 0 2px var(--gd2),4px 4px 0 0 rgba(0,0,0,.45)}
-.artframe canvas{display:block;width:min(288px,68vw);height:auto;image-rendering:pixelated}
-.artmeta b{display:block;font-family:var(--ui-serif);font-size:17px;color:var(--gd4);text-shadow:var(--hard1)}
+.artframe canvas{display:block;width:min(288px,68vw);height:auto;margin:0 auto;image-rendering:pixelated}
+.artmeta{border-top:1px solid rgba(206,168,92,.3);padding-top:11px}
+.artmeta b{display:block;font-family:var(--ui-serif);font-size:17px;color:var(--gd4);text-shadow:var(--hard1);line-height:1.4}
 .artmeta small{display:block;margin:3px 0 8px;font-size:11px;color:var(--gd2)}
 .artmeta p{margin:0;font-size:13.5px;line-height:1.75;color:var(--iv2);word-break:keep-all}
 .artnote{margin-top:8px;font-size:11px;color:var(--iv0)}
@@ -321,8 +324,56 @@ canvas.icon{width:26px;height:26px;image-rendering:pixelated;display:block;margi
 .conversation-head{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:12px!important;align-items:start!important}.conversation-head>div{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:5px!important;min-width:0}.conversation-head h3,.conversation-head small,.conversation-head>b{display:block!important;position:static!important;margin:0!important}.conversation-head h3{line-height:1.3!important;overflow-wrap:anywhere}.conversation-head small{font-size:12px!important;line-height:1.5!important;letter-spacing:.03em!important}.conversation-head>b{line-height:1.4!important;white-space:nowrap}
 .speaker-dialogue{position:static!important;display:grid!important;grid-template-columns:minmax(0,1fr)!important;align-content:center!important;gap:5px!important;min-width:0!important}.speaker-dialogue b,.speaker-dialogue small,.speaker-dialogue p{display:block!important;position:static!important}.speaker-dialogue b{margin:0!important;line-height:1.35!important}.speaker-dialogue small{margin:0!important;line-height:1.45!important}.speaker-dialogue p{margin:5px 0 0!important}
 .items{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))!important;gap:10px!important}.item{padding:8px!important;gap:6px!important;background:linear-gradient(180deg,#142431,#09131c)!important}.item-ic{width:100%!important;height:auto!important;aspect-ratio:1/1;overflow:hidden;background:#1b2a31!important}.item-ic .item-thumb{width:100%;height:100%;object-fit:cover;display:block;image-rendering:auto!important}.item-nm{font-size:14px!important}.item-record-object{display:block;aspect-ratio:1/1;object-fit:cover;image-rendering:auto!important}.item-record-hero{min-height:360px!important;background-position:center!important}.fx-item-discovery{position:fixed;inset:0;z-index:180;display:grid;place-items:center;pointer-events:none;background:rgba(4,13,20,.38);animation:itemReveal .28s ease-out}.fx-item-discovery>div{width:min(390px,84vw);padding:12px 12px 18px;text-align:center;background:#efe0c2 url('assets/ui-parchment.jpg') center/cover;color:#24170d;border:3px solid #d0a13e;box-shadow:inset 0 0 0 3px #203847,0 24px 70px #000b}.fx-item-discovery img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border:2px solid #7d5928}.fx-item-discovery span{display:block;margin-top:11px;color:#21748a;font-size:11px;font-weight:800;letter-spacing:.17em}.fx-item-discovery b{display:block;margin:4px 0;font-size:22px}.fx-item-discovery small{display:block;line-height:1.5}.fx-item-discovery.out{opacity:0;transition:opacity .45s}@keyframes itemReveal{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}@media(max-width:720px){.items{grid-template-columns:repeat(2,minmax(0,1fr))!important}.item-record-hero{min-height:250px!important}}
-.hero-vertical{border:14px solid transparent!important;border-image:url('assets/ui-frame-hero-v2.png') 150 round!important;padding:12px!important}.lang-toggle{cursor:pointer;color:#ffe6a0!important}.nametag.spotg{transform:translate(-50%,4px)!important;font-size:11px!important;padding:2px 6px!important}.art-original{display:block;width:100%;max-height:68vh;object-fit:contain;background:#14110e}.art-movement{display:inline-block;margin:7px 0;padding:4px 8px;background:#245e70;color:#fff0c8;font-size:11px;font-weight:800;letter-spacing:.08em}
+/* 항해지도 사이드 — 액자를 CSS로 그리지 않고 만들어 둔 그림(1242px, 테두리 폭 150px)을 그대로 끼운다.
+   그림 원본 비율(150/1242 ≒ 12.1%)을 지켜야 기둥·월계수·태양 장식이 뭉개지지 않는다. */
+.voyage-frame #herobar{--frame-w:26px}
+.voyage-frame #herobar>.win{border:0!important;background:none!important;box-shadow:none!important;padding:0!important}
+.voyage-frame #herobar .win-bd{padding:0!important;overflow:visible}
+.hero-vertical{
+  border:var(--frame-w,26px) solid transparent!important;
+  border-image:url('assets/ui-frame-hero-v2.png') 150 round!important;
+  padding:5px 3px 7px!important;
+  background:radial-gradient(120% 70% at 50% 0,rgba(58,92,120,.55),rgba(0,0,0,0) 62%),linear-gradient(180deg,#1d3244,#101c26 58%,#0b1319)!important;
+  background-clip:padding-box!important;
+  gap:6px!important}
+/* 오른쪽 퀘스트 패널 — 창마다 테두리를 그리지 않고, 같은 액자 그림 한 장으로 통째로 감싼다 */
+#panel.side{
+  --frame-w:26px;
+  display:block!important;
+  border:var(--frame-w) solid transparent;
+  border-image:url('assets/ui-frame-hero-v2.png') 150 round;
+  padding:4px 6px 8px;
+  background:linear-gradient(rgba(20,13,8,.9),rgba(6,7,8,.96)),url('assets/ui-leather.jpg') center/520px auto;
+  background-clip:padding-box}
+#panel.side>.win{margin:0!important;border:0!important;background:none!important;box-shadow:none!important;padding:0 0 6px!important}
+#panel.side>.win+.win{margin-top:9px!important}
+#panel.side>.win::before,#panel.side>.win::after,#panel.side .win-bd::before,#panel.side .win-bd::after{display:none!important}
+#panel.side .win-bd{padding:8px 5px 0!important}
+/* 좁은 화면에서는 원래대로 2열 — 액자 안에서 나뉘므로 칸 사이 구분선은 뺀다 */
+@media(max-width:1100px){#panel.side{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px}
+  #panel.side>.win+.win{margin-top:0!important;border-top:0!important;padding-top:2px!important}}
+@media(max-width:900px){.voyage-frame #herobar{--frame-w:20px}.hero-vertical{padding:8px!important;gap:8px!important}#panel.side{--frame-w:20px}}
+.lang-toggle{cursor:pointer;color:#ffe6a0!important}.nametag.spotg{transform:translate(-50%,4px)!important;font-size:11px!important;padding:2px 6px!important}.art-original{display:block;width:100%;max-height:46vh;object-fit:contain;background:#14110e}.art-movement{display:inline-block;margin:7px 0;padding:4px 8px;background:#245e70;color:#fff0c8;font-size:11px;font-weight:800;letter-spacing:.08em}
 .map-hint{position:absolute;z-index:12;left:18px;right:18px;bottom:18px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;padding:10px 12px;line-height:1.45;color:#fff1bd;background:linear-gradient(90deg,rgba(16,31,42,.96),rgba(23,17,35,.94));border:1px solid #e0b65b;box-shadow:inset 0 0 0 2px #111c25,0 5px 18px rgba(0,0,0,.65);font-size:13px}.map-hint[hidden]{display:none}.map-hint>i{font-style:normal;font-size:20px}.map-hint>b{color:#f0c85a}.map-hint button{width:28px;height:28px;padding:0;border:1px solid #a87a2d;background:#1c2631;color:#f5df9a;cursor:pointer}@media(max-width:720px){.map-hint{left:10px;right:10px;bottom:10px;font-size:11px}}
+.mini-overlay{position:fixed;inset:0;z-index:70;display:grid;place-items:center;padding:clamp(10px,3vw,34px);background:radial-gradient(circle at 50% 15%,rgba(43,87,104,.42),rgba(2,7,12,.94) 64%),rgba(1,4,7,.88);overflow:auto}
+.mini-shell{width:min(1060px,100%);min-height:min(720px,calc(100vh - 30px));display:flex;flex-direction:column;color:#eef4ed;background:linear-gradient(145deg,#102d3a,#07151f 55%,#0b1115);border:1px solid #78b8b5;box-shadow:0 24px 70px #000,inset 0 0 0 1px rgba(220,249,217,.16);overflow:hidden;animation:miniIn .28s ease both}
+@keyframes miniIn{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:none}}
+.mini-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 24px;border-bottom:1px solid rgba(148,218,199,.28);background:linear-gradient(90deg,rgba(17,61,72,.92),rgba(8,25,34,.7))}.mini-kicker{font:800 10px ui-monospace,monospace;letter-spacing:.2em;color:#9ddac2;text-transform:uppercase}.mini-title{margin:4px 0 0;color:#fff2be;font-size:clamp(22px,3vw,34px);font-weight:900}.mini-head-meta{text-align:right;color:#a9c8c5;font-size:12px;line-height:1.7}.mini-head-meta b{display:block;color:#f6d985;font-size:15px}
+.mini-body{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:22px;align-items:stretch;flex:1;padding:22px}.mini-stage{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:430px;padding:clamp(18px,4vw,42px);background:radial-gradient(circle at 50% 35%,rgba(53,130,133,.4),transparent 48%),linear-gradient(180deg,#0b2635,#08151e);border:1px solid #326a72;box-shadow:inset 0 0 45px rgba(0,0,0,.4)}.mini-stage:before{content:"";position:absolute;inset:13px;border:1px solid rgba(196,226,177,.14);pointer-events:none}.mini-instruction{max-width:620px;margin:0 auto 24px;text-align:center;color:#d8ebe3;font-size:16px;line-height:1.7}.mini-instruction b{color:#ffe08a}.mini-console{display:flex;flex-direction:column;gap:14px;padding:18px;background:linear-gradient(180deg,rgba(16,42,48,.92),rgba(6,18,25,.95));border:1px solid #315d63}.mini-console h3{margin:0;color:#ffe39a;font-size:15px}.mini-console p{margin:0;color:#a9c4c1;font-size:12px;line-height:1.6}.mini-stat{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.mini-stat span{padding:9px 7px;text-align:center;background:rgba(154,211,182,.08);border:1px solid rgba(154,211,182,.2);color:#9dbdb7;font-size:10px}.mini-stat b{display:block;margin-top:3px;color:#fff0bc;font-size:18px}.mini-progress{width:min(560px,100%);height:16px;margin:15px 0 8px;padding:2px;background:#061016;border:1px solid #668a7e}.mini-progress i{display:block;width:0;height:100%;background:linear-gradient(90deg,#d6a640,#7cf0a7);box-shadow:0 0 14px rgba(124,240,167,.45);transition:width .12s ease}.mini-readout{min-height:28px;color:#f6d985;font-weight:800;text-align:center}.mini-readout.good{color:#7dffbc}.mini-readout.bad{color:#ff9787}.mini-action{min-width:210px;min-height:62px;font-size:20px!important;touch-action:none}.mini-secondary{width:100%;margin-top:auto}.mini-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 22px;color:#789b9b;font-size:11px;border-top:1px solid rgba(148,218,199,.18)}.mini-foot button{color:#a9c8c5;background:none;border:0;text-decoration:underline;cursor:pointer}
+.mash-tool{width:min(390px,90%);height:180px;display:grid;place-items:center;position:relative;margin:12px 0 15px;background:repeating-linear-gradient(0deg,rgba(113,78,35,.18) 0 7px,transparent 7px 15px),linear-gradient(145deg,#7d512b,#2b1b16);border:8px solid #b38748;box-shadow:inset 0 0 0 3px #1d130d,0 12px 24px #000}.mash-tool:after{content:"";position:absolute;inset:12px;border:1px dashed rgba(255,218,129,.5);pointer-events:none}.mash-tool .mini-action{position:relative;z-index:2;width:150px;min-width:150px;height:78px;border-radius:50%;background:radial-gradient(circle at 35% 25%,#e4b35c,#825324 65%,#332011)!important;border-color:#f4d486!important;color:#fff5d0!important;box-shadow:0 8px 0 #382110,0 12px 18px #000;transform:translateY(-3px)}.mash-tool .mini-action:active{transform:translateY(4px);box-shadow:0 2px 0 #382110,0 5px 10px #000}
+.memory-pads,.sequence-pads{display:grid;grid-template-columns:repeat(2,120px);gap:12px;margin:14px 0 22px}.memory-pad,.sequence-pad{height:92px;border:2px solid rgba(255,255,255,.18);cursor:pointer;transition:transform .12s,filter .12s,box-shadow .12s;color:#fff;font-size:29px}.memory-pad:nth-child(1),.sequence-pad:nth-child(1){background:#6e3e45}.memory-pad:nth-child(2),.sequence-pad:nth-child(2){background:#2f6874}.memory-pad:nth-child(3),.sequence-pad:nth-child(3){background:#74602c}.memory-pad:nth-child(4),.sequence-pad:nth-child(4){background:#3d596f}.memory-pad:hover,.sequence-pad:hover{filter:brightness(1.25);transform:translateY(-2px)}.memory-pad.lit,.sequence-pad.lit{filter:brightness(1.8);box-shadow:0 0 24px #fff2a4;transform:scale(1.04)}.memory-pad:disabled,.sequence-pad:disabled{cursor:wait;filter:grayscale(.5);opacity:.6}
+.route-options{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:min(620px,100%);margin:12px 0 16px}.route-card{min-height:150px;padding:12px;background:linear-gradient(145deg,#1a4553,#0d222c);border:1px solid #4e8785;color:#eff4df;cursor:pointer;font-size:27px}.route-card b{display:block;margin-top:9px;color:#ffe09a;font-size:13px}.route-card:hover{border-color:#f2cd72;transform:translateY(-3px)}.route-card.selected{background:#325e57;border-color:#7dffbb;box-shadow:0 0 18px rgba(125,255,187,.35)}
+.aim-field{position:relative;width:min(680px,100%);height:310px;margin:8px 0 15px;overflow:hidden;background:radial-gradient(circle at 20% 20%,rgba(127,188,183,.15),transparent 28%),linear-gradient(180deg,#0b2c39,#08161f);border:1px solid #4b8484}.aim-field:after{content:"";position:absolute;inset:20px;background:repeating-linear-gradient(90deg,transparent 0 79px,rgba(139,209,198,.1) 80px 81px),repeating-linear-gradient(0deg,transparent 0 59px,rgba(139,209,198,.08) 60px 61px);pointer-events:none}.aim-target{position:absolute;z-index:2;width:74px;height:74px;border-radius:50%;border:5px solid #f9df86;background:radial-gradient(circle,#ff6b55 0 17%,#ffe18a 18% 33%,#397c7f 34% 55%,#102934 56%);box-shadow:0 0 20px rgba(255,215,111,.8);cursor:crosshair;transition:left .16s,top .16s}
+.sequence-clue{display:flex;gap:9px;align-items:center;justify-content:center;min-height:42px;margin:5px 0 7px;color:#ffe29a;font-size:23px}.sequence-clue small{font-size:12px;color:#a8c8c4}.sequence-pads{grid-template-columns:repeat(4,88px);margin-bottom:11px}.sequence-pad{height:75px;font-size:23px}
+.sudoku-grid{display:grid;grid-template-columns:repeat(4,66px);gap:3px;margin:18px 0;background:#b08b4a;border:3px solid #b08b4a}.sudoku-cell{width:66px;height:56px;border:0;background:#102c38;color:#ffe9a5;font-size:21px;font-weight:800;cursor:pointer}.sudoku-cell.fixed{background:#244e55;color:#c7ddd0;cursor:default}.sudoku-cell:nth-child(4n+2),.sudoku-cell:nth-child(4n+4){border-right:2px solid #d5b968}.sudoku-cell:nth-child(n+9):nth-child(-n+12){border-top:2px solid #d5b968}.sudoku-cell:not(.fixed):hover{background:#2e6970}
+.mine-grid{display:grid;grid-template-columns:repeat(5,52px);gap:4px;margin:15px 0}.mine-cell{width:52px;height:52px;border:1px solid #4c7e7a;background:#173844;color:#ffe08a;font-size:17px;font-weight:800;cursor:pointer}.mine-cell:hover{background:#2b6470}.mine-cell.revealed{background:#0b202a;border-color:#34615f;cursor:default}.mine-cell.mine{background:#7b3c3a;color:#fff0d0}.mine-cell.zero{color:#89d9bf}
+.rhythm-track{position:relative;width:min(680px,100%);height:58px;margin:20px 0;background:#07151c;border:2px solid #487c78;overflow:hidden}.rhythm-zone{position:absolute;left:30%;width:40%;top:0;bottom:0;background:rgba(112,240,176,.25);border-left:2px solid #7dffbb;border-right:2px solid #7dffbb}.rhythm-cursor{position:absolute;top:4px;bottom:4px;left:0;width:8px;background:#fff4b0;box-shadow:0 0 12px #fff}.rhythm-track.live .rhythm-cursor{animation:rhythmRun var(--rhythm-time,1800ms) linear infinite alternate}@keyframes rhythmRun{to{left:calc(100% - 8px)}}
+.bow-wrap{width:min(560px,100%);margin:14px 0 20px}.bow-gauge{position:relative;height:35px;background:#08151b;border:2px solid #7b8973}.bow-fill{height:100%;width:0;background:linear-gradient(90deg,#5e8e74,#e6c064,#ed6d5a);transition:width .05s}.bow-zone{position:absolute;left:72%;width:16%;top:0;bottom:0;border-left:2px solid #a4ffbb;border-right:2px solid #a4ffbb;background:rgba(98,255,175,.18)}.bow-label{display:flex;justify-content:space-between;margin-top:6px;color:#abc4bd;font-size:11px}
+@media(max-width:820px){.mini-body{grid-template-columns:1fr}.mini-console{display:grid;grid-template-columns:1fr 1fr;align-items:start}.mini-console h3,.mini-console p,.mini-secondary{grid-column:1/-1}.mini-stat{grid-column:1/-1}.mini-stage{min-height:390px}}
+@media(max-width:520px){.mini-head{padding:14px}.mini-head-meta{display:none}.mini-body{padding:10px;gap:10px}.mini-stage{padding:16px 10px}.memory-pads{grid-template-columns:repeat(2,105px)}.route-options{grid-template-columns:1fr}.route-card{min-height:82px}.sequence-pads{grid-template-columns:repeat(2,88px)}.sudoku-grid{transform:scale(.9);margin-left:-12px;margin-right:-12px}.mini-foot{padding:10px 14px}}
+.title-menu #titleStart,.title-menu #titleStart small,#begin,#begin small{color:#fff!important;text-shadow:0 2px 5px #000}.title-menu #titleStart{background:linear-gradient(180deg,#b77b25,#704313)!important;border-color:#f2d078!important}.title-menu #titleStart:hover{filter:brightness(1.15)}
+.voyage-map-frame{position:relative;grid-template-columns:minmax(0,1fr) 276px!important;padding:14px!important;background:linear-gradient(135deg,#102b3e 0,#0a1722 48%,#111d26 100%)!important;border:1px solid #c9a34c!important;box-shadow:inset 0 0 0 2px #071018,inset 0 0 0 4px rgba(218,180,82,.25),inset 0 0 30px rgba(89,173,190,.16),0 18px 42px rgba(0,0,0,.7)!important}.voyage-map-frame:before{content:"";position:absolute;inset:7px;z-index:0;border:1px solid rgba(231,200,117,.45);pointer-events:none}.voyage-map-frame:after{content:"✦  THE VOYAGE RECORD  ·  CARTOGRAPHER'S EDITION  ✦";position:absolute;z-index:5;left:50%;top:-9px;transform:translateX(-50%);padding:3px 14px;color:#f6d889;background:#0e2531;border:1px solid #caa44f;box-shadow:0 3px 10px #000;font:800 9px ui-monospace,monospace;letter-spacing:.16em;white-space:nowrap}.voyage-map-frame .viewport{position:relative;z-index:1;border:2px solid #7fc0c2!important;outline:1px solid #d2b357!important;outline-offset:-7px;box-shadow:inset 0 0 0 2px #07151d,inset 0 0 30px rgba(93,222,219,.18),0 8px 20px #000!important}.voyage-map-frame .voyage-map-plaque{top:15px;color:#e9f0db;background:linear-gradient(180deg,rgba(17,63,71,.95),rgba(8,27,34,.95));border-color:#a7d1c1;box-shadow:inset 0 0 0 2px #0a1a22,0 4px 14px #000}.voyage-map-frame .voyage-map-plaque small{color:#a8cbc5}.voyage-map-frame #herobar{position:relative;z-index:1}.voyage-map-frame .hero-vertical{border-color:#629897!important;background:linear-gradient(180deg,#153d4b,#08151d 65%,#071017)!important}
+.ending-cinema{position:relative;min-height:min(760px,calc(100vh - 44px));display:grid;place-items:center;overflow:hidden;padding:clamp(24px,7vw,80px);color:#f5f0d8;background:radial-gradient(circle at 50% 23%,rgba(247,195,94,.42),transparent 20%),radial-gradient(circle at 50% 86%,rgba(39,122,137,.35),transparent 38%),linear-gradient(180deg,#11172a 0,#0a101a 56%,#061a25 100%);border:1px solid #d7ad53;box-shadow:inset 0 0 0 2px rgba(245,218,146,.22),inset 0 0 90px rgba(0,0,0,.65),0 18px 45px #000}.ending-cinema:before{content:"";position:absolute;inset:18px;border:1px solid rgba(239,207,121,.3);pointer-events:none}.ending-sun{position:absolute;width:min(38vw,300px);height:min(38vw,300px);top:9%;border-radius:50%;background:radial-gradient(circle,#fff6c7 0 9%,#f2c561 27%,rgba(221,152,55,.35) 57%,transparent 70%);filter:blur(.2px);opacity:.85}.ending-starfield{position:absolute;inset:0;background-image:radial-gradient(circle at 18% 22%,#fff2af 0 1px,transparent 2px),radial-gradient(circle at 77% 18%,#fff2af 0 1px,transparent 2px),radial-gradient(circle at 26% 42%,#8dcbd0 0 1px,transparent 2px),radial-gradient(circle at 88% 54%,#fff2af 0 1px,transparent 2px);opacity:.62}.ending-copy{position:relative;z-index:2;width:min(760px,100%);padding:clamp(22px,4vw,46px);text-align:center;background:linear-gradient(180deg,rgba(7,14,24,.54),rgba(5,12,18,.9));border:1px solid rgba(226,190,93,.65);box-shadow:0 14px 32px rgba(0,0,0,.55)}.ending-kicker{font:800 11px ui-monospace,monospace;letter-spacing:.24em;color:#f2c967}.ending-copy h1{margin:10px 0 12px;font-size:clamp(30px,6vw,62px);line-height:1.05;color:#fff0b8;text-shadow:0 3px 0 #533614,0 7px 20px #000}.ending-copy>p{max-width:650px;margin:0 auto;color:#e7e7d8;font-size:16px;line-height:1.85}.ending-lesson{margin:22px auto;padding:15px 17px;max-width:650px;text-align:left;color:#f8e7b2;line-height:1.75;background:rgba(55,111,117,.22);border-left:3px solid #efc65e}.ending-lesson b{color:#fff3ba}.ending-summary{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:20px 0}.ending-summary div{padding:10px 4px;background:rgba(2,8,13,.68);border:1px solid rgba(153,199,190,.28)}.ending-summary b{display:block;color:#ffe49a;font-size:19px}.ending-summary span{font-size:10px;color:#a8c2bf}.ending-actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}.ending-actions .btn{min-width:170px}.ending-actions #endReset{color:#fff!important}.ending-footer{margin-top:16px;color:#91adab;font-size:11px}@media(max-width:620px){.voyage-map-frame:after{font-size:7px;letter-spacing:.08em}.ending-summary{grid-template-columns:repeat(3,1fr)}.ending-copy>p{font-size:14px}.ending-lesson{font-size:13px}}
 `;
 
 const COLLECTIONS = [
@@ -352,6 +403,19 @@ const ITEM_ART = {
 };
 const TREASURE_CHESTS_HD = typeof Image !== 'undefined' ? new Image() : null;
 if (TREASURE_CHESTS_HD) { TREASURE_CHESTS_HD.decoding = 'async'; TREASURE_CHESTS_HD.src = 'assets/treasure-chests-hd-v2.png'; }
+/* Important map objects use real raster art; the pixel prop remains the loading fallback. */
+const TREASURE_CHEST_FRONT = typeof Image !== 'undefined' ? new Image() : null;
+if (TREASURE_CHEST_FRONT) { TREASURE_CHEST_FRONT.decoding = 'async'; TREASURE_CHEST_FRONT.src = 'assets/generated/treasure-chest-front.png'; }
+const SPECIAL_PROP_IMAGES = {};
+if (typeof Image !== 'undefined') {
+  for (const [key, src] of Object.entries({
+    poseidonTemple: 'assets/generated/poseidon-temple-front.png',
+    heliosAltar: 'assets/generated/helios-altar-front.png',
+    heliosOx: 'assets/generated/helios-ox-front.png'
+  })) {
+    const img = new Image(); img.decoding = 'async'; img.src = src; SPECIAL_PROP_IMAGES[key] = img;
+  }
+}
 Object.assign(CONTENT.ITEMS,{
  penelope_shuttle:{name:'페넬로페의 베틀 북',kind:'relic',rarity:3,desc:'푸른 실이 감긴 올리브나무 베틀 북. 긴 항해에서도 페넬로페와 이타카를 기억하게 한다.',effect:'귀향의 기억 · 지혜 +5',stat:{atk:0,def:0,wis:5,hp:0}},
  ithaca_seal:{name:'이타카의 인장 반지',kind:'relic',rarity:2,desc:'섬과 올리브나무, 배가 새겨진 이타카 왕가의 청동 인장.',effect:'정체성의 증표 · 지혜 +4',stat:{atk:0,def:1,wis:4,hp:0}},
@@ -533,7 +597,7 @@ function fresh() {
     lv: 1, exp: 0, hp: 100, maxHp: 100, mp: 30, maxMp: 30,
     atk: 10, def: 6, wis: 8,
     stars: 0, gold: 20,
-    items: {}, equip: { weapon: null, armor: null, relic: null },
+    items: { penelope_carving: 1 }, equip: { weapon: null, armor: null, relic: null },
     flags: {}, met: {}, talkCount: {}, quizDone: {}, quizRight: {},
     quests: {}, titles: [], chests: {}, spotSeen: {}, collections: {}, fastMove: false,
     log: [], seenScenes: { ogygia: true }, storySeen: {}, goalOpen: true,
@@ -549,6 +613,12 @@ function migrateItemArtV2(){
   };
   for(const qid of Object.keys(grants))if(S.quests&&S.quests[qid]&&S.quests[qid].done)for(const id of grants[qid])S.items[id]=Math.max(1,S.items[id]||0);
   S.flags=S.flags||{};S.flags.itemArtV2=true;
+}
+/* 시작 소지품이라 fresh() 에만 있다. 이미 진행 중인 저장에도 한 번 넣어 준다. */
+function migratePenelopeCarving(){
+  if(S.flags&&S.flags.penelopeCarving)return;
+  S.items=S.items||{};S.items.penelope_carving=Math.max(1,S.items.penelope_carving||0);
+  S.flags=S.flags||{};S.flags.penelopeCarving=true;
 }
 let S = fresh();
 let cam = { x: 0, y: 0 };
@@ -691,7 +761,8 @@ const ITEM_LORE = {
   wind_bag:'아이올로스가 귀향에 필요한 바람만 남기고 나머지를 가둔 자루다. 오해와 불신 때문에 고향을 눈앞에 두고 다시 멀어진 사건을 보여 준다.',
   moly:'헤르메스가 키르케의 마법을 막으라고 준 검은 뿌리와 흰 꽃의 약초다. 신에게는 뽑기 쉽지만 인간에게는 어렵다고 시인은 설명한다.',
   great_bow:'오디세우스만 쉽게 시위를 걸 수 있는 큰 활이다. 페넬로페의 활쏘기 시험에서 왕의 정체와 숙련을 증명하는 물건이 된다.',
-  olive_bed_post:'오디세우스가 살아 있는 올리브나무를 기둥 삼아 만든 침대의 일부다. 부부만 아는 비밀이어서 최종 귀향의 신원 증거가 된다.'
+  olive_bed_post:'오디세우스가 살아 있는 올리브나무를 기둥 삼아 만든 침대의 일부다. 부부만 아는 비밀이어서 최종 귀향의 신원 증거가 된다.',
+  penelope_carving:'★ 이 물건은 《오디세이아》 원전에 나오지 않는다. 호메로스는 오디세우스가 아내의 조각상을 지녔다고 말한 적이 없다. 이것은 뒷날 사람들이 뮤지컬·영화·그림에서 "그는 왜 그렇게까지 돌아가려 했을까"를 눈에 보이게 만들려고 새로 더한 소품이다. 원전에서 그 마음을 보여 주는 장면은 따로 있다 — 5권에서 오디세우스는 칼립소가 준다는 영원한 젊음을 마다하고, 바닷가에 앉아 고향 쪽을 보며 운다. 옛이야기는 이렇게 후대 사람들의 손을 거치며 새 물건과 새 장면을 얻는다. 어느 것이 원전이고 어느 것이 나중에 더해진 것인지 구별할 줄 아는 것도 신화를 읽는 힘이다.'
 };
 function openItemRecord(id){const it=CONTENT.ITEMS[id];if(!it)return;const lore=ITEM_LORE[id]||'이 물건은 《오디세이아》의 항해, 환대, 금기, 가족과 귀향의 기억에 연결된다. 물건의 모습과 쓰임을 살피며 어느 사건에서 중요한 역할을 했는지 기억해 보자.';const ov=$('#overlay');spotView={item:id};ov.hidden=false;ov.innerHTML='<div class="modal">'+UI.win('신화 유물 기록 · '+itemDisplayName(it),`<div class="artifact-sheet">${itemArt(id)?`<div class="artifact-hero item-record-hero" style="background-image:url('${esc(itemArt(id))}')"><div class="artifact-title"><h2>${esc(it.name)}</h2><div>오디세이아 항해 수집품</div></div></div>`:''}<div class="artifact-body"><div>${itemVisual(id,'artifact-object item-record-object')}</div><div class="artifact-story"><h3>${esc(it.name)}</h3><p>${esc(it.desc)}</p><div class="learning-points"><section><b>이야기 속 배경</b>${esc(lore)}</section><section><b>게임 효과</b>${esc(it.effect||it.desc)}</section></div></div></div><footer class="artifact-footer"><p>희귀도 · ${it.rarity||0}/3</p>${UI.btn('기록 닫기',{id:'itemRecordClose',cls:'btn--pri'})}</footer></div>`,{tone:'gold'})+'</div>';paintIcons();$('#itemRecordClose').onclick=()=>{spotView=null;renderOverlay()}}
 function showItemDiscovery(id){const it=CONTENT.ITEMS[id],src=itemArt(id);if(!it||!src)return;const e=document.createElement('div');e.className='fx-item-discovery';e.innerHTML=`<div><img src="${esc(src)}" alt=""><span>새로운 소지품</span><b>${esc(it.name)}</b><small>${esc(it.desc)}</small></div>`;document.body.appendChild(e);setTimeout(()=>e.classList.add('out'),2200);setTimeout(()=>e.remove(),2700)}
@@ -861,12 +932,39 @@ function neighOf(g, x, y) {
   return { n: at(x, y - 1), s: at(x, y + 1), e: at(x + 1, y), w: at(x - 1, y), ne: at(x + 1, y - 1), nw: at(x - 1, y - 1), se: at(x + 1, y + 1), sw: at(x - 1, y + 1) };
 }
 function drawTreasureChest(g, p, opened) {
+  if (TREASURE_CHEST_FRONT && TREASURE_CHEST_FRONT.complete && TREASURE_CHEST_FRONT.naturalWidth) {
+    const cx = p.tx * T + T / 2, by = p.ty * T + T;
+    PX.shadow(g, cx, by, opened ? 11 : 12, 2, opened ? 0.12 : 0.28);
+    g.save(); g.imageSmoothingEnabled = true;
+    if (opened) g.globalAlpha = 0.45;
+    g.drawImage(TREASURE_CHEST_FRONT, 0, 0, TREASURE_CHEST_FRONT.naturalWidth, TREASURE_CHEST_FRONT.naturalHeight,
+      Math.round(cx - 15), Math.round(by - 28), 30, 28);
+    g.restore();
+    return true;
+  }
   if (!TREASURE_CHESTS_HD || !TREASURE_CHESTS_HD.complete || !TREASURE_CHESTS_HD.naturalWidth) return false;
   const cx = p.tx * T + T / 2, by = p.ty * T + T;
   const src = opened ? { x:388, y:12, w:365, h:475, dw:28, dh:36 } : { x:16, y:65, w:360, h:420, dw:26, dh:30 };
   PX.shadow(g, cx, by, opened ? 11 : 10, 2, opened ? 0.20 : 0.30);
   g.save(); g.imageSmoothingEnabled = true;
   g.drawImage(TREASURE_CHESTS_HD, src.x, src.y, src.w, src.h, Math.round(cx - src.dw / 2), Math.round(by - src.dh), src.dw, src.dh);
+  g.restore();
+  return true;
+}
+function specialPropArt(scene, p) {
+  if (scene === 'scheria' && p.ch === 't' && p.tx === 26 && p.ty === 5) return { key: 'poseidonTemple', w: 48, h: 48, shadow: [24, 47, 19, 3, 0.22] };
+  if (scene === 'thrinacia' && p.ch === 'A' && p.tx === 29 && p.ty === 5) return { key: 'heliosAltar', w: 36, h: 42, shadow: [18, 41, 13, 3, 0.22] };
+  if (scene === 'thrinacia' && p.ch === 'k' && p.tx === 23 && p.ty === 7) return { key: 'heliosOx', w: 30, h: 38, shadow: [15, 37, 12, 3, 0.20] };
+  return null;
+}
+function drawSpecialProp(g, scene, p) {
+  const spec = specialPropArt(scene, p), img = spec && SPECIAL_PROP_IMAGES[spec.key];
+  if (!spec || !img || !img.complete || !img.naturalWidth) return false;
+  const cx = p.tx * T + T / 2, by = p.ty * T + T;
+  PX.shadow(g, cx, by, spec.shadow[2], spec.shadow[3], spec.shadow[4]);
+  g.save(); g.imageSmoothingEnabled = true;
+  g.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight,
+    Math.round(cx - spec.w / 2), Math.round(by - spec.h), spec.w, spec.h);
   g.restore();
   return true;
 }
@@ -901,6 +999,7 @@ function drawFrame() {
     draws.push({
       y: p.ty * T + T, f: () => {
         if (p.ch === 'x' && drawTreasureChest(g, p, opened)) return;
+        if (drawSpecialProp(g, S.scene, p)) return;
         /* 이미 연 상자는 흐리게 그려 "가져갔다"는 것을 보여 준다 */
         if (opened) { g.save(); g.globalAlpha = 0.45; PROPS.draw(g, p.ch, p.tx, p.ty, frame); g.restore(); }
         else PROPS.draw(g, p.ch, p.tx, p.ty, frame);
@@ -1736,16 +1835,167 @@ function showChapterStory(scene, after, gallery = false) {
 }
 
 /* ==================== 항해 시련 미니게임 ==================== */
+const VOYAGE_CHALLENGES = {
+  ogygia: { type:'mash', icon:'🪵', title:'칼립소의 뗏목', objective:'나무를 다듬고 밧줄을 당겨 뗏목을 완성하세요.', hint:'버튼을 빠르게 눌러 작업 게이지를 끝까지 채우세요.', stat:'def', goal:24, seconds:9 },
+  scheria: { type:'memory', icon:'🎶', title:'데모도코스의 노래', objective:'왕의 연회에서 들은 노래의 순서를 기억하세요.', hint:'빛난 파이아케스의 문양을 같은 순서로 누르세요.', stat:'wis', length:5 },
+  cicones: { type:'route', icon:'🛶', title:'이즈마로스에서 철수', objective:'전리품보다 귀환을 택하고, 바람이 바뀌기 전에 배로 돌아가세요.', hint:'세 번의 선택에서 안전한 철수 신호를 고르세요.', stat:'wis', answer:[1,2,0] },
+  lotus: { type:'mash', icon:'🌿', title:'망각의 연꽃에서 깨어나기', objective:'연꽃의 달콤한 향에 잠긴 동료들을 배로 끌어오세요.', hint:'망각이 가득 차기 전에 귀환의 매듭을 반복해서 당기세요.', stat:'def', goal:32, seconds:8 },
+  cyclops: { type:'aim', icon:'🫒', title:'올리브 말뚝을 겨누다', objective:'어둠 속에서 올리브 말뚝의 끝을 정확히 달구세요.', hint:'움직이는 붉은 중심을 다섯 번 맞히면 탈출 준비가 됩니다.', stat:'atk', goal:5 },
+  aeaea: { type:'sequence', icon:'🌱', title:'헤르메스의 몰리 조합', objective:'검은 뿌리와 흰 꽃의 약초를 올바른 순서로 섞으세요.', hint:'빛나는 약초의 순서를 보고 그대로 따라 누르세요.', stat:'wis', length:6 },
+  underworld: { type:'sudoku', icon:'🔥', title:'저승의 네 등불', objective:'테이레시아스 앞에서 네 방향의 등불을 겹치지 않게 밝히세요.', hint:'각 행·열·구역에 1부터 4까지 한 번씩만 놓으세요.', stat:'wis', puzzle:[1,0,0,4,0,4,1,0,0,1,4,0,4,0,0,1], solution:[1,3,2,4,2,4,1,3,3,1,4,2,4,2,3,1] },
+  sirens: { type:'rhythm', icon:'🎼', title:'세이렌의 노래를 건너다', objective:'귀를 막은 선원들에게 노의 박자를 맞춰 주세요.', hint:'노가 황금 구간에 들어오면 버튼이나 보드를 눌러 주세요. 조금 틀려도 괜찮습니다.', stat:'def', goal:4, window:500 },
+  thrinacia: { type:'mines', icon:'🐂', title:'태양신의 목초지', objective:'신성한 소를 해치지 않고 안전한 길만 찾아 목초지를 건너세요.', hint:'지뢰찾기처럼 위험한 칸을 피하고 안전한 칸을 모두 찾으세요.', stat:'wis', mines:[1,7,13,19,22], size:5 },
+  ithaca: { type:'loom', icon:'🧵', title:'페넬로페의 베틀', objective:'낮에는 짜고 밤에는 푸는 베틀의 규칙을 완성해 시간을 버세요.', hint:'가로·세로 실이 만나는 순서대로 빈 칸을 채우세요. 베틀을 끝내면 활 시험이 열립니다.', stat:'wis', puzzle:[0,2,0,1,1,0,2,0,0,1,0,2], solution:[1,2,2,1,1,2,1,2,2,1,2,2] }
+};
 function voyageChallenge() {
   const idx = Math.max(0, ORDER.indexOf(S.scene));
-  return { id: 'sail_' + S.scene, stat: ['wis', 'def', 'atk'][idx % 3], wait: Math.max(420, 1000 - idx * 45), title: ['돛의 균형', '파도의 호흡', '키잡이의 판단'][idx % 3] };
+  const base = VOYAGE_CHALLENGES[S.scene] || VOYAGE_CHALLENGES.ogygia;
+  return { id:'sail_' + S.scene, stat:base.stat || ['wis','def','atk'][idx % 3], ...base, chapter:idx + 1 };
 }
 function openVoyageGame(exitAfter) {
   if (quiz || battle || shop || decision || spotView || voyageGame) return;
-  voyageGame = { round: 0, hits: 0, results: [], ready: false, timer: 0, warnTimer: 0, started: 0, keyHandler: null, exitAfter: !!exitAfter };
+  voyageGame = { round:0, hits:0, results:[], ready:false, timer:0, warnTimer:0, started:0, keyHandler:null, cleanup:[], exitAfter:!!exitAfter, state:{} };
   renderVoyageGame();
 }
+function miniOn(el, type, fn) {
+  if (!el) return;
+  el.addEventListener(type, fn);
+  if (voyageGame) voyageGame.cleanup.push(() => el.removeEventListener(type, fn));
+}
+function miniTimer(fn, ms, repeat) {
+  const id = repeat ? setInterval(fn, ms) : setTimeout(fn, ms);
+  if (voyageGame) voyageGame.cleanup.push(() => repeat ? clearInterval(id) : clearTimeout(id));
+  return id;
+}
+function miniStatus(text, cls) {
+  const el = $('#miniStatus'); if (!el) return;
+  el.textContent = text; el.className = 'mini-readout' + (cls ? ' ' + cls : '');
+}
+function miniFinish(ok, quit) { if (voyageGame) finishVoyage(!!ok, !!quit); }
+function miniKeys(fn) {
+  const h = e => { if (!voyageGame) return; if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); fn(e); } };
+  voyageGame.keyHandler = h; document.addEventListener('keydown', h);
+  voyageGame.cleanup.push(() => document.removeEventListener('keydown', h));
+}
+function miniHeader(c) {
+  return `<header class="mini-head"><div><div class="mini-kicker">CHAPTER ${String(c.chapter).padStart(2,'0')} · INTERACTIVE TRIAL</div><div class="mini-title">${c.icon} ${esc(c.title)}</div></div><div class="mini-head-meta"><b>${esc(SCENES[S.scene].title)}</b><span id="miniChapterHint">장면을 통과해야 다음 장이 열립니다</span></div></header>`;
+}
+function miniShell(c, stage, consoleText) {
+  return `<div class="mini-overlay"><div class="mini-shell">${miniHeader(c)}<div class="mini-body"><section class="mini-stage">${stage}</section><aside class="mini-console"><h3>이번 장의 관문</h3><p>${esc(c.objective)}</p><div class="mini-stat"><span>유형<b>${esc({mash:'연타',memory:'기억',route:'선택',aim:'조준',sequence:'조합',sudoku:'논리',rhythm:'박자',mines:'지뢰찾기',loom:'베틀'}[c.type] || '시험')}</b></span><span>보상 능력<b>${esc({atk:'힘',def:'방어',wis:'지혜'}[c.stat] || '기록')}</b></span></div><p>${esc(consoleText || c.hint)}</p><button class="btn btn--ghost mini-secondary" id="miniQuit">항해를 포기하고 돌아가기</button></aside></div><footer class="mini-foot"><span>이 관문을 해결해야 다음 챕터로 이동할 수 있습니다.</span><span>Space / Enter 지원</span></footer></div></div>`;
+}
+function miniStage(c) {
+  if (c.type === 'mash') return `<p class="mini-instruction">${esc(c.objective)}<br><b>${esc(c.hint)}</b></p><div class="mash-tool"><button class="btn btn--pri mini-action" id="miniAction">당기기</button></div><div class="mini-progress"><i id="miniFill"></i></div><div class="mini-readout" id="miniStatus">0 / ${c.goal}</div>`;
+  if (c.type === 'memory') return `<p class="mini-instruction">${esc(c.objective)}<br><b>${esc(c.hint)}</b></p><div class="memory-pads" id="memoryPads">${['🌊','🦚','⚓','🏛'].map((x,i)=>`<button class="memory-pad" data-pad="${i}" disabled>${x}</button>`).join('')}</div><div class="mini-readout" id="miniStatus">노래를 듣고 있어요…</div>`;
+  if (c.type === 'route') return `<p class="mini-instruction">${esc(c.objective)}<br><b>${esc(c.hint)}</b></p><div class="route-options" id="routeOptions">${[['⚔️','전리품을 더 챙긴다'],['🌬️','바람을 읽고 닻을 푼다'],['🕯️','밤까지 불을 밝힌다']].map((x,i)=>`<button class="route-card" data-route="${i}">${x[0]}<b>${x[1]}</b></button>`).join('')}</div><div class="mini-readout" id="miniStatus">첫 번째 신호를 고르세요 · 1 / 3</div>`;
+  if (c.type === 'aim') return `<p class="mini-instruction">${esc(c.objective)}<br><b>${esc(c.hint)}</b></p><div class="aim-field" id="aimField"><button class="aim-target" id="aimTarget" aria-label="올리브 말뚝의 중심"></button></div><div class="mini-readout" id="miniStatus">중심을 맞힌 횟수 0 / ${c.goal}</div>`;
+  if (c.type === 'sequence') return `<p class="mini-instruction">${esc(c.objective)}<br><b>${esc(c.hint)}</b></p><div class="sequence-clue" id="sequenceClue">🌱 <small>순서를 보여 주는 중…</small></div><div class="sequence-pads" id="sequencePads">${['🖤','🤍','🌿','✨'].map((x,i)=>`<button class="sequence-pad" data-pad="${i}" disabled>${x}</button>`).join('')}</div><div class="mini-readout" id="miniStatus">몰리의 순서를 기억하세요.</div>`;
+  if (c.type === 'sudoku') return `<p class="mini-instruction">${esc(c.objective)}<br><b>${esc(c.hint)}</b></p><div class="sudoku-grid" id="sudokuGrid">${c.puzzle.map((v,i)=>`<button class="sudoku-cell ${v?'fixed':''}" data-cell="${i}">${v || '·'}</button>`).join('')}</div><div class="mini-readout" id="miniStatus">빈 등불을 눌러 1 → 4를 바꾸세요.</div>`;
+  if (c.type === 'rhythm') return `<p class="mini-instruction">${esc(c.objective)}<br><b>${esc(c.hint)}</b></p><div class="rhythm-track" id="rhythmTrack"><i class="rhythm-zone"></i><i class="rhythm-cursor"></i></div><button class="btn btn--pri mini-action" id="miniAction">노 젓기</button><div class="mini-readout" id="miniStatus">노가 계속 왕복합니다. 황금 구간에서 반복해서 누르세요.</div>`;
+  if (c.type === 'mines') return `<p class="mini-instruction">${esc(c.objective)}<br><b>${esc(c.hint)}</b></p><div class="mine-grid" id="mineGrid">${Array.from({length:25},(_,i)=>`<button class="mine-cell" data-mine="${i}">?</button>`).join('')}</div><div class="mini-readout" id="miniStatus">안전한 칸 0 / 20</div>`;
+  if (c.type === 'loom') return `<p class="mini-instruction">${esc(c.objective)}<br><b>${esc(c.hint)}</b></p><div class="sudoku-grid" id="sudokuGrid">${c.puzzle.map((v,i)=>`<button class="sudoku-cell ${v?'fixed':''}" data-cell="${i}">${v ? (v===1?'╱':'╲') : '·'}</button>`).join('')}</div><div class="mini-readout" id="miniStatus">빈 칸을 눌러 실의 방향을 바꾸세요.</div>`;
+  return `<p class="mini-instruction">${esc(c.objective)}<br><b>${esc(c.hint)}</b></p><div class="bow-wrap"><div class="bow-gauge"><i class="bow-zone"></i><i class="bow-fill" id="bowFill"></i></div><div class="bow-label"><span>느슨함</span><b>황금 구간에서 놓기</b><span>한계</span></div></div><button class="btn btn--pri mini-action" id="miniAction">활시위 당기기</button><div class="mini-readout" id="miniStatus">3발 중 0발 성공 · 누르고 있다가 황금 구간에서 놓으세요.</div>`;
+}
 function renderVoyageGame() {
+  const ov = $('#overlay'); if (!ov || !voyageGame) return;
+  const c = voyageChallenge();
+  ov.hidden = false;
+  ov.innerHTML = miniShell(c, miniStage(c));
+  const quit = $('#miniQuit'); if (quit) miniOn(quit, 'click', () => miniFinish(false, true));
+  initMiniGame(c);
+}
+function initMiniGame(c) {
+  if (c.type === 'mash') return initMiniMash(c);
+  if (c.type === 'memory') return initMiniMemory(c, 'memory');
+  if (c.type === 'route') return initMiniRoute(c);
+  if (c.type === 'aim') return initMiniAim(c);
+  if (c.type === 'sequence') return initMiniMemory(c, 'sequence');
+  if (c.type === 'sudoku') return initMiniSudoku(c);
+  if (c.type === 'rhythm') return initMiniRhythm(c);
+  if (c.type === 'mines') return initMiniMines(c);
+  return initMiniLoom(c);
+}
+function initMiniMash(c) {
+  const g = voyageGame.state = { value:0, goal:c.goal, end:performance.now() + c.seconds * 1000 };
+  const btn = $('#miniAction'), fill = $('#miniFill');
+  const tap = () => { if (!voyageGame || performance.now() >= g.end) return; g.value++; if (fill) fill.style.width = Math.min(100, g.value / g.goal * 100) + '%'; miniStatus(g.value + ' / ' + g.goal, 'good'); if (g.value >= g.goal) miniFinish(true, false); };
+  miniOn(btn, 'click', tap); miniKeys(tap);
+  miniTimer(() => { if (!voyageGame) return; const left = Math.max(0, g.end - performance.now()); if (left <= 0) miniFinish(false, false); else if (g.value < g.goal) miniStatus(g.value + ' / ' + g.goal + ' · ' + (left / 1000).toFixed(1) + '초'); }, 100, true);
+}
+function miniPattern(c, kind) { const n = c.length || 5; const seed = ORDER.indexOf(S.scene) + (kind === 'sequence' ? 2 : 0); return Array.from({length:n}, (_,i) => (seed * 3 + i * 2 + (i % 3)) % 4); }
+function initMiniMemory(c, kind) {
+  const pads = $$('#' + (kind === 'sequence' ? 'sequencePads' : 'memoryPads') + ' [data-pad]');
+  const seq = miniPattern(c, kind), g = voyageGame.state = { seq, pos:0, showing:true };
+  const clue = $('#sequenceClue');
+  const flash = (idx) => { const p = pads[idx]; if (!p) return; p.classList.add('lit'); miniTimer(() => p.classList.remove('lit'), 260); };
+  seq.forEach((v,i) => miniTimer(() => flash(v), 620 * i + 350));
+  miniTimer(() => { g.showing = false; pads.forEach(p => p.disabled = false); if (clue) clue.innerHTML = kind === 'sequence' ? '🧪 <small>순서를 따라 몰리를 조합하세요</small>' : '🎶 <small>이제 당신의 차례입니다</small>'; miniStatus('순서 ' + (g.pos + 1) + ' / ' + seq.length); }, 620 * seq.length + 420);
+  pads.forEach(p => miniOn(p, 'click', () => { if (g.showing || !voyageGame) return; const v = Number(p.dataset.pad); flash(v); if (v !== seq[g.pos]) { miniStatus('순서가 끊겼습니다. 다시 항해를 준비하세요.', 'bad'); miniFinish(false, false); return; } g.pos++; miniStatus('정확해요 · ' + g.pos + ' / ' + seq.length, 'good'); if (g.pos >= seq.length) miniFinish(true, false); }));
+}
+function initMiniRoute(c) {
+  const g = voyageGame.state = { step:0 };
+  $$('#routeOptions [data-route]').forEach(card => miniOn(card, 'click', () => { if (!voyageGame) return; const v = Number(card.dataset.route); if (v !== c.answer[g.step]) { card.classList.add('selected'); miniStatus('잘못된 신호입니다. 동료들이 위험에 빠졌습니다.', 'bad'); miniFinish(false, false); return; } card.classList.add('selected'); g.step++; if (g.step >= c.answer.length) miniFinish(true, false); else miniStatus('안전한 판단 · 다음 신호 ' + (g.step + 1) + ' / ' + c.answer.length, 'good'); }));
+}
+function initMiniAim(c) {
+  const target = $('#aimTarget'), field = $('#aimField'), g = voyageGame.state = { hits:0 };
+  const move = () => { if (!target || !field) return; const x = 8 + Math.random() * 82, y = 8 + Math.random() * 72; target.style.left = x + '%'; target.style.top = y + '%'; };
+  miniOn(target, 'click', e => { e.stopPropagation(); g.hits++; miniStatus('중심 명중 · ' + g.hits + ' / ' + c.goal, 'good'); move(); if (g.hits >= c.goal) miniFinish(true, false); });
+  move(); miniTimer(() => { if (voyageGame && g.hits < c.goal) miniFinish(false, false); }, 12000);
+}
+function initMiniSudoku(c) {
+  const cells = $$('#sudokuGrid [data-cell]'), g = voyageGame.state = { values:c.puzzle.slice() };
+  cells.forEach(cell => miniOn(cell, 'click', () => { const i = Number(cell.dataset.cell); if (c.puzzle[i]) return; g.values[i] = (g.values[i] % 4) + 1; cell.textContent = g.values[i]; const filled = g.values.every(Boolean); miniStatus(filled ? '모든 등불이 켜졌습니다. 해답을 확인하는 중…' : '등불 ' + g.values.filter(Boolean).length + ' / 16'); if (filled && g.values.every((v,j) => v === c.solution[j])) miniFinish(true, false); else if (filled) miniStatus('규칙이 맞지 않습니다. 틀린 칸을 다시 눌러 보세요.', 'bad'); }));
+}
+function initMiniRhythm(c) {
+  const btn = $('#miniAction'), track = $('#rhythmTrack'), cursor = track && track.querySelector('.rhythm-cursor');
+  const g = voyageGame.state = { beats:0, misses:0, started:performance.now(), period:1800, raf:0 };
+  if (track) { track.classList.add('live'); track.style.setProperty('--rhythm-time', g.period + 'ms'); }
+  const animate = now => {
+    if (!voyageGame) return;
+    const phase = ((now - g.started) % (g.period * 2)) / g.period;
+    const pct = phase <= 1 ? phase : 2 - phase;
+    if (cursor) cursor.style.left = `calc(${Math.max(0, Math.min(1, pct)) * 100}% - 4px)`;
+    g.raf = requestAnimationFrame(animate);
+  };
+  g.raf = requestAnimationFrame(animate);
+  voyageGame.cleanup.push(() => cancelAnimationFrame(g.raf));
+  const hit = () => {
+    if (!voyageGame) return;
+    const phase = ((performance.now() - g.started) % (g.period * 2)) / g.period;
+    const pct = phase <= 1 ? phase : 2 - phase;
+    if (pct < .30 || pct > .70) {
+      g.misses++;
+      miniStatus('노의 박자가 조금 어긋났어요 · 실수 ' + g.misses + ' / 5', 'bad');
+      if (g.misses >= 5) miniFinish(false, false);
+      return;
+    }
+    g.beats++;
+    miniStatus('노 젓기 성공 · ' + g.beats + ' / ' + c.goal, 'good');
+    if (g.beats >= c.goal) miniFinish(true, false);
+  };
+  miniOn(btn, 'click', hit); miniOn(track, 'click', hit); miniKeys(hit);
+}
+function initMiniMines(c) {
+  const cells = $$('#mineGrid [data-mine]'), mines = new Set(c.mines), g = voyageGame.state = { revealed:new Set() };
+  const count = i => { let n=0; const x=i%5,y=Math.floor(i/5); for(let dy=-1;dy<=1;dy++) for(let dx=-1;dx<=1;dx++){const nx=x+dx,ny=y+dy,j=ny*5+nx;if(nx>=0&&nx<5&&ny>=0&&ny<5&&mines.has(j))n++;} return n; };
+  const reveal = i => { if (i<0 || i>=25 || g.revealed.has(i) || mines.has(i)) return; g.revealed.add(i); const cell=cells[i], n=count(i); cell.classList.add('revealed'); cell.textContent=n?'·'.repeat(n):'○'; if (!n) { const x=i%5,y=Math.floor(i/5); for(let dy=-1;dy<=1;dy++) for(let dx=-1;dx<=1;dx++){const nx=x+dx,ny=y+dy;if(nx>=0&&nx<5&&ny>=0&&ny<5)reveal(ny*5+nx);} } };
+  cells.forEach(cell => miniOn(cell, 'click', () => { const i=Number(cell.dataset.mine); if (!voyageGame || g.revealed.has(i)) return; if (mines.has(i)) { cell.classList.add('mine','revealed'); cell.textContent='✦'; miniStatus('태양신의 소가 놀랐습니다. 위험한 칸을 밟았습니다.', 'bad'); miniFinish(false, false); return; } reveal(i); miniStatus('안전한 칸 ' + g.revealed.size + ' / ' + (25-mines.size), 'good'); if (g.revealed.size >= 25-mines.size) miniFinish(true, false); }));
+}
+function startIthacaBow(c) {
+  const stage = document.querySelector('.mini-stage'); if (!stage || !voyageGame) return;
+  stage.innerHTML = `<p class="mini-instruction"><b>베틀의 시간이 충분히 벌어졌습니다.</b><br>이제 페넬로페의 활 시험입니다. 활시위를 황금 구간까지 당겨 세 발을 맞히세요.</p><div class="bow-wrap"><div class="bow-gauge"><i class="bow-zone"></i><i class="bow-fill" id="bowFill"></i></div><div class="bow-label"><span>느슨함</span><b>72~88%에서 놓기</b><span>한계</span></div></div><button class="btn btn--pri mini-action" id="miniAction">활시위 당기기</button><div class="mini-readout" id="miniStatus">3발 중 0발 성공 · 최대 3번까지 빗나갈 수 있습니다.</div>`;
+  const btn = $('#miniAction'), fill = $('#bowFill'), g = voyageGame.state = { shots:0, misses:0, down:0, holding:false, raf:0 };
+  const tick = () => { if (!voyageGame || !g.holding) return; const pct = Math.min(100, (performance.now() - g.down) / 1200 * 100); if (fill) fill.style.width = pct + '%'; g.raf = requestAnimationFrame(tick); };
+  const press = e => { if (e) e.preventDefault(); if (g.holding || !voyageGame) return; g.holding=true; g.down=performance.now(); if (btn) btn.textContent='당기는 중…'; g.raf=requestAnimationFrame(tick); };
+  const release = e => { if (e) e.preventDefault(); if (!g.holding || !voyageGame) return; g.holding=false; cancelAnimationFrame(g.raf); const pct=Math.min(100,(performance.now()-g.down)/1200*100); if (fill) fill.style.width=pct+'%'; if (pct>=72 && pct<=88) { g.shots++; miniStatus('정확한 발사! ' + g.shots + ' / 3', 'good'); } else { g.misses++; miniStatus((pct<72?'조금 더 당겨야 합니다.':'시위를 너무 세게 당겼습니다.') + ' 빗나감 ' + g.misses + ' / 3', 'bad'); } if (btn) btn.textContent='활시위 당기기'; if (g.shots>=3) miniFinish(true,false); else if (g.misses>=3) miniFinish(false,false); };
+  miniOn(btn,'pointerdown',press); miniOn(btn,'pointerup',release); miniOn(btn,'pointerleave',release); miniOn(btn,'pointercancel',release);
+  const kd=e=>{if(e.code==='Space'||e.code==='Enter'){e.preventDefault();press(e);}}; const ku=e=>{if(e.code==='Space'||e.code==='Enter'){e.preventDefault();release(e);}}; document.addEventListener('keydown',kd); document.addEventListener('keyup',ku); voyageGame.cleanup.push(()=>{document.removeEventListener('keydown',kd);document.removeEventListener('keyup',ku);cancelAnimationFrame(g.raf);});
+}
+function initMiniLoom(c) {
+  const cells = $$('#sudokuGrid [data-cell]'), g = voyageGame.state = { values:c.puzzle.slice() };
+  cells.forEach(cell => miniOn(cell, 'click', () => { const i=Number(cell.dataset.cell); if (c.puzzle[i]) return; g.values[i]=(g.values[i]+1)%3; cell.textContent=g.values[i] ? (g.values[i]===1?'╱':'╲') : '·'; const filled=g.values.every(Boolean); miniStatus('실을 맞춘 칸 ' + g.values.filter(Boolean).length + ' / ' + c.solution.length); if (filled) { const ok=g.values.every((v,j)=>v===c.solution[j]); if(ok) startIthacaBow(c); else miniStatus('실의 방향이 어긋났습니다. 다시 풀어 보세요.', 'bad'); } }));
+}
+
+function renderVoyageGameLegacy() {
   const ov = $('#overlay'); if (!ov || !voyageGame) return;
   const c = voyageChallenge();
   ov.hidden = false;
@@ -1806,6 +2056,7 @@ function finishVoyage(win, quit) {
   if (!voyageGame) return;
   clearTimeout(voyageGame.timer); clearTimeout(voyageGame.warnTimer);
   if (voyageGame.keyHandler) document.removeEventListener('keydown', voyageGame.keyHandler);
+  (voyageGame.cleanup || []).splice(0).forEach(fn => { try { fn(); } catch (e) { } });
   const c = voyageChallenge(), first = !(S.minisDone || {})[c.id];
   const continueExit = !!(voyageGame.exitAfter && win);
   if (win) {
@@ -2168,7 +2419,7 @@ function renderMap() {
   $('#screen').innerHTML = `<div class="stage">
     <section class="screen">
       ${UI.win(scLabel.title + ' · ' + (idx + 1) + '/10', `
-        <div class="voyage-frame"><div class="viewport voyage-map-art">
+        <div class="voyage-frame voyage-map-frame"><div class="viewport voyage-map-art">
           <div class="voyage-map-plaque">${esc(scLabel.title)}<small>THE VOYAGE RECORD · CHAPTER ${String(idx + 1).padStart(2,'0')}</small></div>
           <canvas id="map" class="cv" width="${CW * 2}" height="${CH * 2}" aria-label="${esc(scLabel.title)} map"></canvas>
           <div id="labels" class="labels"></div>
@@ -2239,7 +2490,12 @@ function renderPanel() {
     </div>`, { tone: 'dark' });
   }
   const vf = document.querySelector('.voyage-frame');
-  if (vf && innerWidth > 900) vf.style.height = Math.round(vf.clientWidth * CH / (CW + 208)) + 'px';
+  /* 지도 뷰포트가 CW:CH 비율을 지키도록 액자 높이를 잡는다 (좌우 여백 10*2 + 간격 12 + 사이드 열 276) */
+  if (vf && innerWidth > 900) {
+    const SIDE = 276, GAP = 12, PAD = 10;
+    const viewW = Math.max(160, vf.clientWidth - PAD * 2 - GAP - SIDE);
+    vf.style.height = Math.round(viewW * CH / CW + PAD * 2) + 'px';
+  }
   $$('#panel [data-dec]').forEach(b => {
     const d = sceneDecisions().find(x => x.flag === b.dataset.dec);
     if (d) b.onclick = () => openDecision(d);
@@ -2418,20 +2674,22 @@ function renderBattle() {
 function renderEnding() {
   const all = allQuests(), doneN = all.filter(q => (S.quests[q.id] || {}).done).length;
   const quizAll = ORDER.reduce((a, k) => a + ((CONTENT.QUIZ[k] || []).length), 0);
-  $('#screen').innerHTML = UI.win('귀향', `<div class="ending">
-    <h2>오디세우스는 마침내 자기 집으로 돌아왔다</h2>
-    <p>오기기아의 해변에서 시작한 귀향은 이타카 궁전과 올리브나무 침대 앞에서 끝납니다. 20년 만에 그는 자기 집 문턱을 넘었습니다. 힘으로만 이긴 것이 아니라, 참을 때를 알고 말할 때를 골랐기 때문입니다.</p>
-    <div class="dec-lesson"><b>원전의 마지막 증거</b><br>페넬로페는 침대를 옮기라고 시험합니다. 살아 있는 올리브나무를 중심으로 오디세우스가 직접 만든 침대는 두 사람만 아는 비밀이었습니다. 그 대답으로 왕과 아내는 서로를 확인하고, 긴 귀향이 비로소 ‘집으로 돌아옴’이 됩니다.</div>
-    <div class="endstats">
-      <div><b>Lv.${S.lv}</b><span>최종 레벨</span></div>
-      <div><b>★${S.stars}</b><span>모은 별</span></div>
-      <div><b>${esc(rankOf().name)}</b><span>최종 등급</span></div>
-      <div><b>${doneN}/${all.length}</b><span>퀘스트</span></div>
-      <div><b>${Object.keys(S.quizDone).length}/${quizAll}</b><span>시험</span></div>
-      <div><b>${Object.keys(S.items).length}종</b><span>보물</span></div>
+  const minis = Object.keys(S.minisDone || {}).length;
+  $('#screen').innerHTML = `<section class="ending-cinema">
+    <div class="ending-starfield" aria-hidden="true"></div><div class="ending-sun" aria-hidden="true"></div>
+    <div class="ending-copy">
+      <div class="ending-kicker">THE VOYAGE RECORD · HOME FOUND</div>
+      <h1>마침내, 이타카</h1>
+      <p>오디세우스는 긴 바다와 신들의 분노, 동료의 흔들림을 지나 자기 집의 문턱에 섰습니다. 귀향은 단순히 도착하는 일이 아니라, 끝까지 기억하고 선택하는 일이었습니다.</p>
+      <div class="ending-lesson"><b>페넬로페의 마지막 질문</b><br>“우리의 침대를 옮겨 주세요.”<br>오디세우스는 그 침대가 살아 있는 올리브나무를 중심으로 직접 만든 것임을 알아보았습니다. 두 사람만 아는 비밀이 서로를 다시 집으로 불러 주었습니다.</div>
+      <div class="ending-summary">
+        <div><b>Lv.${S.lv}</b><span>최종 레벨</span></div><div><b>★${S.stars}</b><span>모은 별</span></div><div><b>${esc(rankOf().name)}</b><span>항해 등급</span></div>
+        <div><b>${minis}/10</b><span>관문 통과</span></div><div><b>${doneN}/${all.length}</b><span>퀘스트</span></div><div><b>${Object.keys(S.items).length}종</b><span>기록한 보물</span></div>
+      </div>
+      <div class="ending-actions">${UI.btn('여정의 기록 다시 보기', { id:'endLore', cls:'btn--ghost' })}${UI.btn('새로 시작하기', { id:'endReset', cls:'btn--pri' })}</div>
+      <div class="ending-footer">다음 항해에서는 다른 선택과 미니게임으로 새로운 귀향 기록을 만들 수 있습니다.</div>
     </div>
-    <div class="row row--end">${UI.btn('여정을 다시 본다', { id: 'endLore', cls: 'btn--ghost' })}${UI.btn('처음부터 다시', { id: 'endReset', cls: 'btn--pri' })}</div>
-  </div>`, { tone: 'gold' });
+  </section>`;
   const a = $('#endLore'); if (a) a.onclick = () => go('lore');
   const b = $('#endReset'); if (b) b.onclick = () => { if (confirm('처음부터 다시 시작할까요?')) { S = fresh(); mapCache = null; save(); go('start'); } };
 }
@@ -2516,6 +2774,7 @@ function init() {
   const saved = Store.load();
   if (saved) S = Object.assign(fresh(), saved);
   migrateItemArtV2();
+  migratePenelopeCarving();
   calibrate();
   initSystem();
   initInput();
